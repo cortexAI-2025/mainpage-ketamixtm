@@ -1,0 +1,2110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KETAMIX — Standardized Extract-Ready Botanical Inputs</title>
+  <meta name="description" content="KETAMIX is a Moroccan B2B platform transforming classified cannabis biomass into traceable, standardized, extract-ready inputs for regulated value chains." />
+  <meta property="og:title" content="KETAMIX — Standardized Extract-Ready Botanical Inputs" />
+  <meta property="og:description" content="Multi-ratio cannabinoid standardization. Moroccan origin. Industrial discipline. Extract-ready B2B ingredients platform." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ketamix.ma" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%231a2e1a'/><text x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-family='serif' font-weight='bold' font-size='14' fill='%23c8a96e'>K</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Mono:wght@300;400;500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black:       #0b0e0b;
+      --deep-green:  #0f1f0f;
+      --forest:      #1a3320;
+      --moss:        #2d5a3d;
+      --sage:        #4a7c5c;
+      --sand:        #c8a96e;
+      --sand-light:  #dfc99a;
+      --sand-pale:   #f2e8d5;
+      --off-white:   #f5f2ec;
+      --warm-white:  #faf8f4;
+      --mid-gray:    #8a9088;
+      --light-gray:  #d4d8d2;
+      --border:      rgba(200,169,110,0.18);
+      --border-soft: rgba(255,255,255,0.07);
+
+      --font-display: 'Cormorant Garamond', Georgia, serif;
+      --font-body:    'Outfit', sans-serif;
+      --font-mono:    'DM Mono', monospace;
+
+      --ease-smooth: cubic-bezier(0.16, 1, 0.3, 1);
+      --ease-in:     cubic-bezier(0.4, 0, 1, 1);
+    }
+
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      background: var(--black);
+      color: var(--off-white);
+      font-family: var(--font-body);
+      font-weight: 300;
+      line-height: 1.65;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ─── NOISE TEXTURE OVERLAY ─── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 999;
+      opacity: 0.35;
+    }
+
+    /* ─── TYPOGRAPHY ─── */
+    h1, h2, h3, h4 { font-weight: 400; line-height: 1.15; }
+
+    .display-xl {
+      font-family: var(--font-display);
+      font-size: clamp(3.2rem, 7vw, 7rem);
+      font-weight: 300;
+      letter-spacing: -0.02em;
+      line-height: 1.0;
+    }
+    .display-lg {
+      font-family: var(--font-display);
+      font-size: clamp(2.4rem, 4.5vw, 4.2rem);
+      font-weight: 300;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+    }
+    .display-md {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 2.8vw, 2.6rem);
+      font-weight: 400;
+      letter-spacing: -0.01em;
+    }
+    .label {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--sand);
+    }
+    .body-lg { font-size: 1.05rem; line-height: 1.75; }
+    .body-sm { font-size: 0.88rem; line-height: 1.65; color: var(--mid-gray); }
+
+    /* ─── UTILITY ─── */
+    .container { max-width: 1240px; margin: 0 auto; padding: 0 2rem; }
+    .container-narrow { max-width: 860px; margin: 0 auto; padding: 0 2rem; }
+    section { position: relative; }
+    .divider { width: 100%; height: 1px; background: var(--border); }
+    .sand { color: var(--sand); }
+    .sage-text { color: var(--sage); }
+
+    /* ─── NAV ─── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      transition: background 0.4s var(--ease-smooth), backdrop-filter 0.4s;
+    }
+    nav.scrolled {
+      background: rgba(11,14,11,0.88);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 68px;
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+    .nav-logo {
+      font-family: var(--font-display);
+      font-size: 1.45rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      color: var(--off-white);
+      text-decoration: none;
+    }
+    .nav-logo span { color: var(--sand); }
+    .nav-links {
+      display: flex;
+      gap: 2.5rem;
+      list-style: none;
+    }
+    .nav-links a {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--mid-gray);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--sand-light); }
+    .nav-cta {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      background: transparent;
+      border: 1px solid var(--sand);
+      color: var(--sand);
+      padding: 0.55rem 1.4rem;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.25s, color 0.25s;
+    }
+    .nav-cta:hover { background: var(--sand); color: var(--black); }
+    .nav-mobile-toggle { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+    .nav-mobile-toggle span {
+      display: block; width: 22px; height: 1px;
+      background: var(--off-white); margin: 5px 0;
+      transition: transform 0.3s, opacity 0.3s;
+    }
+
+    /* ─── BUTTONS ─── */
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 0.6rem;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      background: var(--sand);
+      color: var(--black);
+      padding: 0.9rem 2rem;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: background 0.25s, transform 0.2s var(--ease-smooth);
+    }
+    .btn-primary:hover { background: var(--sand-light); transform: translateY(-1px); }
+    .btn-secondary {
+      display: inline-flex; align-items: center; gap: 0.6rem;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      background: transparent;
+      color: var(--off-white);
+      padding: 0.9rem 2rem;
+      border: 1px solid rgba(255,255,255,0.22);
+      text-decoration: none;
+      cursor: pointer;
+      transition: border-color 0.25s, color 0.25s, transform 0.2s var(--ease-smooth);
+    }
+    .btn-secondary:hover { border-color: var(--sand); color: var(--sand); transform: translateY(-1px); }
+    .btn-ghost {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      background: none; border: none;
+      color: var(--sand); cursor: pointer;
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      text-decoration: none;
+      padding: 0;
+      transition: gap 0.2s;
+    }
+    .btn-ghost:hover { gap: 0.9rem; }
+
+    /* ─── HERO ─── */
+    #hero {
+      min-height: 100vh;
+      background: var(--deep-green);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      overflow: hidden;
+      position: relative;
+    }
+    .hero-bg-grid {
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(rgba(200,169,110,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(200,169,110,0.04) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none;
+    }
+    .hero-bg-gradient {
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse 60% 80% at 70% 50%, rgba(45,90,61,0.35) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-left {
+      padding: 10rem 4rem 6rem 4rem;
+      position: relative;
+      z-index: 2;
+    }
+    .hero-batch-tag {
+      display: inline-flex; align-items: center; gap: 0.6rem;
+      border: 1px solid var(--border);
+      padding: 0.4rem 1rem;
+      margin-bottom: 2.5rem;
+    }
+    .hero-batch-dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--sage);
+      animation: pulse 2.5s ease-in-out infinite;
+    }
+    @keyframes pulse { 0%,100% { opacity:1; } 50% { opacity:0.3; } }
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(3.6rem, 6vw, 6.5rem);
+      font-weight: 300;
+      letter-spacing: -0.02em;
+      line-height: 1.0;
+      margin-bottom: 0.3rem;
+      color: var(--off-white);
+    }
+    .hero-title-sub {
+      font-family: var(--font-display);
+      font-size: clamp(1.1rem, 1.8vw, 1.55rem);
+      font-weight: 300;
+      font-style: italic;
+      color: var(--sand);
+      margin-bottom: 2rem;
+      letter-spacing: 0.01em;
+    }
+    .hero-desc {
+      font-size: 0.97rem;
+      color: rgba(245,242,236,0.65);
+      max-width: 460px;
+      line-height: 1.75;
+      margin-bottom: 3rem;
+    }
+    .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .hero-metrics {
+      display: flex; gap: 3rem;
+      margin-top: 4rem;
+      padding-top: 2.5rem;
+      border-top: 1px solid var(--border);
+    }
+    .hero-metric-val {
+      font-family: var(--font-display);
+      font-size: 2.2rem;
+      font-weight: 400;
+      color: var(--sand);
+    }
+    .hero-metric-label {
+      font-family: var(--font-mono);
+      font-size: 0.62rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--mid-gray);
+      margin-top: 0.2rem;
+    }
+
+    /* hero right — abstract scientific composition */
+    .hero-right {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .hero-diagram {
+      position: relative;
+      width: 520px;
+      height: 520px;
+    }
+    .diagram-ring {
+      position: absolute;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      top: 50%; left: 50%;
+      transform: translate(-50%,-50%);
+    }
+    .ring-1 { width: 520px; height: 520px; border-color: rgba(200,169,110,0.08); }
+    .ring-2 { width: 380px; height: 380px; border-color: rgba(200,169,110,0.12); animation: rotate 40s linear infinite; }
+    .ring-3 { width: 240px; height: 240px; border-color: rgba(200,169,110,0.2); animation: rotate-r 28s linear infinite; }
+    .ring-4 { width: 120px; height: 120px; background: rgba(45,90,61,0.3); border-color: rgba(200,169,110,0.35); }
+    @keyframes rotate { to { transform: translate(-50%,-50%) rotate(360deg); } }
+    @keyframes rotate-r { to { transform: translate(-50%,-50%) rotate(-360deg); } }
+    .diagram-node {
+      position: absolute;
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      background: var(--sand);
+      top: 50%; left: 50%;
+      transform-origin: 0 0;
+    }
+    .diagram-center-text {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%,-50%);
+      text-align: center;
+    }
+    .diagram-center-text .label { color: var(--sand); font-size: 0.6rem; }
+    .diagram-center-text p {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      font-weight: 500;
+      margin-top: 0.3rem;
+    }
+    .diagram-orbit-labels {
+      position: absolute;
+      inset: 0;
+    }
+    .orbit-label {
+      position: absolute;
+      font-family: var(--font-mono);
+      font-size: 0.58rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--sage);
+    }
+    .hero-data-card {
+      position: absolute;
+      bottom: 15%;
+      right: 5%;
+      background: rgba(15,31,15,0.85);
+      border: 1px solid var(--border);
+      padding: 1.2rem 1.5rem;
+      backdrop-filter: blur(10px);
+      width: 200px;
+    }
+    .data-card-row {
+      display: flex; justify-content: space-between; align-items: baseline;
+      padding: 0.4rem 0;
+      border-bottom: 1px solid rgba(200,169,110,0.1);
+    }
+    .data-card-row:last-child { border-bottom: none; }
+    .data-card-key { font-family: var(--font-mono); font-size: 0.58rem; color: var(--mid-gray); text-transform: uppercase; letter-spacing: 0.1em; }
+    .data-card-val { font-family: var(--font-mono); font-size: 0.65rem; color: var(--sand-light); }
+
+    /* ─── SECTION SHARED ─── */
+    .section-header { margin-bottom: 4rem; }
+    .section-header .label { display: block; margin-bottom: 1rem; }
+    .section-tag {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    .section-tag::before {
+      content: '';
+      display: block; width: 24px; height: 1px;
+      background: var(--sand);
+    }
+
+    /* ─── ABOUT ─── */
+    #about {
+      padding: 8rem 0;
+      background: var(--black);
+    }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6rem;
+      align-items: start;
+    }
+    .about-left {}
+    .about-left p {
+      color: rgba(245,242,236,0.7);
+      margin-top: 1.5rem;
+      font-size: 0.97rem;
+      line-height: 1.8;
+    }
+    .about-right {
+      padding-top: 1rem;
+    }
+    .about-pillars { display: flex; flex-direction: column; gap: 0; }
+    .about-pillar {
+      display: flex; align-items: flex-start; gap: 1.5rem;
+      padding: 1.4rem 0;
+      border-bottom: 1px solid var(--border);
+      opacity: 0;
+      transform: translateX(20px);
+      transition: opacity 0.5s var(--ease-smooth), transform 0.5s var(--ease-smooth);
+    }
+    .about-pillar.visible { opacity: 1; transform: none; }
+    .pillar-num {
+      font-family: var(--font-mono);
+      font-size: 0.6rem;
+      color: var(--sand);
+      padding-top: 0.15rem;
+      min-width: 24px;
+    }
+    .pillar-text strong {
+      display: block;
+      font-family: var(--font-body);
+      font-weight: 500;
+      font-size: 0.9rem;
+      color: var(--off-white);
+      margin-bottom: 0.3rem;
+    }
+    .pillar-text span { font-size: 0.83rem; color: var(--mid-gray); }
+
+    /* ─── FLOW DIAGRAM ─── */
+    #flow {
+      padding: 5rem 0;
+      background: var(--deep-green);
+      overflow: hidden;
+    }
+    .flow-track {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      overflow-x: auto;
+      padding: 2.5rem 0;
+      scrollbar-width: none;
+    }
+    .flow-track::-webkit-scrollbar { display: none; }
+    .flow-step {
+      flex: 0 0 auto;
+      display: flex; align-items: center; gap: 0;
+    }
+    .flow-node {
+      background: rgba(45,90,61,0.3);
+      border: 1px solid var(--border);
+      padding: 1.4rem 2rem;
+      text-align: center;
+      min-width: 160px;
+      transition: background 0.3s, border-color 0.3s;
+    }
+    .flow-node:hover { background: rgba(45,90,61,0.6); border-color: var(--sand); }
+    .flow-node-icon { font-size: 1.4rem; margin-bottom: 0.6rem; }
+    .flow-node-title {
+      font-family: var(--font-body);
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+    }
+    .flow-node-sub {
+      font-family: var(--font-mono);
+      font-size: 0.58rem;
+      color: var(--mid-gray);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-top: 0.3rem;
+    }
+    .flow-arrow {
+      width: 60px; height: 1px;
+      background: linear-gradient(90deg, var(--sage), transparent);
+      position: relative;
+      flex-shrink: 0;
+    }
+    .flow-arrow::after {
+      content: '';
+      position: absolute;
+      right: 0; top: -3px;
+      width: 0; height: 0;
+      border-left: 6px solid var(--sage);
+      border-top: 3px solid transparent;
+      border-bottom: 3px solid transparent;
+    }
+
+    /* ─── PRODUCTS ─── */
+    #products {
+      padding: 8rem 0;
+      background: var(--black);
+    }
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.5px;
+      background: var(--border);
+      margin-top: 3rem;
+    }
+    .product-card {
+      background: var(--black);
+      padding: 2.5rem;
+      position: relative;
+      overflow: hidden;
+      cursor: default;
+      transition: background 0.35s var(--ease-smooth);
+    }
+    .product-card::before {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--sand);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s var(--ease-smooth);
+    }
+    .product-card:hover { background: rgba(26,51,32,0.6); }
+    .product-card:hover::before { transform: scaleX(1); }
+    .product-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 1.5rem;
+    }
+    .product-tag {
+      font-family: var(--font-mono);
+      font-size: 0.58rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      background: rgba(45,90,61,0.3);
+      border: 1px solid rgba(74,124,92,0.3);
+      color: var(--sage);
+      padding: 0.3rem 0.7rem;
+    }
+    .product-index {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      color: var(--mid-gray);
+    }
+    .product-name {
+      font-family: var(--font-display);
+      font-size: 1.65rem;
+      font-weight: 400;
+      margin-bottom: 0.8rem;
+      color: var(--off-white);
+    }
+    .product-desc {
+      font-size: 0.85rem;
+      color: rgba(245,242,236,0.6);
+      line-height: 1.75;
+      margin-bottom: 1.5rem;
+    }
+    .product-specs {
+      border-top: 1px solid var(--border);
+      padding-top: 1.2rem;
+      margin-top: auto;
+    }
+    .spec-row {
+      display: flex; justify-content: space-between;
+      padding: 0.3rem 0;
+    }
+    .spec-key { font-family: var(--font-mono); font-size: 0.6rem; color: var(--mid-gray); text-transform: uppercase; letter-spacing: 0.1em; }
+    .spec-val { font-family: var(--font-mono); font-size: 0.62rem; color: var(--sand-light); }
+    .product-ratio-bar {
+      margin-top: 1.2rem;
+      height: 3px;
+      background: rgba(255,255,255,0.06);
+      position: relative;
+      overflow: hidden;
+    }
+    .ratio-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--sage), var(--sand));
+      transition: width 1.2s var(--ease-smooth);
+    }
+
+    /* ─── WHY KETAMIX ─── */
+    #why {
+      padding: 8rem 0;
+      background: var(--deep-green);
+    }
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      background: var(--border);
+      margin-top: 3rem;
+    }
+    .why-card {
+      background: var(--deep-green);
+      padding: 2.5rem;
+      transition: background 0.3s;
+    }
+    .why-card:hover { background: rgba(45,90,61,0.5); }
+    .why-icon {
+      width: 42px; height: 42px;
+      margin-bottom: 1.4rem;
+      color: var(--sand);
+    }
+    .why-title {
+      font-family: var(--font-body);
+      font-size: 1rem;
+      font-weight: 500;
+      margin-bottom: 0.7rem;
+      color: var(--off-white);
+    }
+    .why-desc { font-size: 0.84rem; color: var(--mid-gray); line-height: 1.75; }
+
+    /* ─── TECHNICAL SPECS ─── */
+    #technical {
+      padding: 8rem 0;
+      background: var(--black);
+    }
+    .tech-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 5rem;
+      align-items: start;
+    }
+    .tech-intro p {
+      font-size: 0.93rem;
+      color: rgba(245,242,236,0.65);
+      line-height: 1.8;
+      margin-top: 1.5rem;
+    }
+    .tech-specs-list { display: flex; flex-direction: column; gap: 0; }
+    .tech-spec-item {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 2rem;
+      padding: 1.5rem 0;
+      border-bottom: 1px solid var(--border);
+      opacity: 0;
+      transform: translateY(12px);
+      transition: opacity 0.5s var(--ease-smooth), transform 0.5s var(--ease-smooth);
+    }
+    .tech-spec-item.visible { opacity: 1; transform: none; }
+    .tech-spec-key {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--sand);
+      padding-top: 0.1rem;
+    }
+    .tech-spec-val {
+      font-size: 0.88rem;
+      color: rgba(245,242,236,0.72);
+      line-height: 1.7;
+    }
+    .tech-badge {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: rgba(26,51,32,0.5);
+      border: 1px solid var(--border);
+      padding: 0.4rem 1rem;
+      margin-top: 2rem;
+      font-family: var(--font-mono);
+      font-size: 0.62rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--sage);
+    }
+
+    /* ─── MOROCCAN ORIGIN ─── */
+    #origin {
+      padding: 8rem 0;
+      background: var(--forest);
+      position: relative;
+      overflow: hidden;
+    }
+    .origin-bg {
+      position: absolute;
+      inset: 0;
+      background-image: repeating-linear-gradient(
+        60deg,
+        transparent,
+        transparent 38px,
+        rgba(200,169,110,0.025) 38px,
+        rgba(200,169,110,0.025) 39px
+      );
+      pointer-events: none;
+    }
+    .origin-layout {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 5rem;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+    .origin-left {}
+    .origin-left p {
+      font-size: 0.95rem;
+      color: rgba(245,242,236,0.68);
+      line-height: 1.8;
+      margin-top: 1.5rem;
+    }
+    .origin-left p + p { margin-top: 1rem; }
+    .origin-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5px;
+      background: var(--border);
+      margin-top: 3rem;
+    }
+    .origin-stat {
+      background: rgba(26,51,32,0.6);
+      padding: 1.5rem;
+      text-align: center;
+    }
+    .origin-stat-val {
+      font-family: var(--font-display);
+      font-size: 2.4rem;
+      color: var(--sand);
+    }
+    .origin-stat-label {
+      font-family: var(--font-mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--mid-gray);
+      margin-top: 0.3rem;
+    }
+    .origin-right {
+      border: 1px solid var(--border);
+      padding: 2.5rem;
+      background: rgba(11,14,11,0.4);
+    }
+    .origin-quote {
+      font-family: var(--font-display);
+      font-size: 1.55rem;
+      font-style: italic;
+      font-weight: 300;
+      line-height: 1.5;
+      color: var(--sand-light);
+      margin-bottom: 1.5rem;
+    }
+    .origin-values { display: flex; flex-direction: column; gap: 0.8rem; margin-top: 1.5rem; }
+    .origin-value {
+      display: flex; align-items: center; gap: 1rem;
+      font-size: 0.85rem;
+      color: rgba(245,242,236,0.7);
+    }
+    .origin-value-dot {
+      width: 4px; height: 4px;
+      border-radius: 50%;
+      background: var(--sand);
+      flex-shrink: 0;
+    }
+
+    /* ─── B2B APPLICATIONS ─── */
+    #applications {
+      padding: 8rem 0;
+      background: var(--black);
+    }
+    .applications-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5px;
+      background: var(--border);
+      margin-top: 3rem;
+    }
+    .app-card {
+      background: var(--black);
+      padding: 2rem;
+      position: relative;
+      transition: background 0.3s;
+    }
+    .app-card:hover { background: rgba(26,51,32,0.5); }
+    .app-icon {
+      width: 36px; height: 36px;
+      margin-bottom: 1.2rem;
+      color: var(--sand);
+    }
+    .app-title {
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      font-weight: 500;
+      margin-bottom: 0.7rem;
+    }
+    .app-desc { font-size: 0.82rem; color: var(--mid-gray); line-height: 1.7; }
+
+    /* ─── TRACEABILITY ─── */
+    #traceability {
+      padding: 8rem 0;
+      background: var(--deep-green);
+    }
+    .trace-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+    .trace-left p {
+      font-size: 0.93rem;
+      color: rgba(245,242,236,0.65);
+      line-height: 1.8;
+      margin-top: 1.5rem;
+    }
+    .batch-card {
+      background: rgba(11,14,11,0.6);
+      border: 1px solid var(--border);
+      padding: 2rem;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+    }
+    .batch-header {
+      display: flex; justify-content: space-between; align-items: center;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .batch-id { color: var(--sand); letter-spacing: 0.12em; }
+    .batch-status {
+      display: flex; align-items: center; gap: 0.5rem;
+      font-size: 0.6rem;
+      color: var(--sage);
+    }
+    .batch-status-dot {
+      width: 5px; height: 5px; border-radius: 50%;
+      background: var(--sage);
+      animation: pulse 2s infinite;
+    }
+    .batch-rows { display: flex; flex-direction: column; gap: 0; }
+    .batch-row {
+      display: flex; justify-content: space-between;
+      padding: 0.6rem 0;
+      border-bottom: 1px solid rgba(200,169,110,0.07);
+      font-size: 0.63rem;
+    }
+    .batch-row-key { color: var(--mid-gray); text-transform: uppercase; letter-spacing: 0.1em; }
+    .batch-row-val { color: var(--sand-light); }
+    .batch-qr {
+      margin-top: 1.5rem;
+      display: flex; align-items: center; gap: 1rem;
+    }
+    .qr-placeholder {
+      width: 52px; height: 52px;
+      border: 1px solid var(--border);
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      gap: 2px;
+      padding: 4px;
+    }
+    .qr-cell { background: var(--sand); border-radius: 1px; opacity: 0; }
+    .qr-cell:nth-child(odd) { opacity: 0.8; }
+    .qr-cell:nth-child(3n) { opacity: 1; }
+    .qr-text { font-size: 0.6rem; color: var(--mid-gray); line-height: 1.6; }
+    .trace-features { margin-top: 2rem; display: flex; flex-direction: column; gap: 0.8rem; }
+    .trace-feature {
+      display: flex; align-items: flex-start; gap: 1rem;
+      font-size: 0.85rem;
+      color: rgba(245,242,236,0.7);
+    }
+    .trace-feature-icon { color: var(--sage); flex-shrink: 0; margin-top: 1px; }
+
+    /* ─── ROADMAP ─── */
+    #roadmap {
+      padding: 8rem 0;
+      background: var(--black);
+    }
+    .roadmap-timeline {
+      margin-top: 4rem;
+      position: relative;
+    }
+    .roadmap-timeline::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 1px;
+      background: linear-gradient(180deg, var(--sand) 0%, transparent 100%);
+    }
+    .roadmap-phase {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 3rem;
+      padding: 2.5rem 0 2.5rem 2.5rem;
+      position: relative;
+      opacity: 0;
+      transform: translateX(-15px);
+      transition: opacity 0.6s var(--ease-smooth), transform 0.6s var(--ease-smooth);
+    }
+    .roadmap-phase.visible { opacity: 1; transform: none; }
+    .roadmap-phase::before {
+      content: '';
+      position: absolute;
+      left: -4px; top: 2.8rem;
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--sand);
+    }
+    .roadmap-phase-label {
+      font-family: var(--font-mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--sand);
+      margin-bottom: 0.5rem;
+    }
+    .roadmap-phase-title {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      color: var(--off-white);
+    }
+    .roadmap-phase-content {}
+    .roadmap-phase-desc {
+      font-size: 0.88rem;
+      color: rgba(245,242,236,0.65);
+      line-height: 1.75;
+      margin-bottom: 1rem;
+    }
+    .roadmap-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .roadmap-tag {
+      font-family: var(--font-mono);
+      font-size: 0.58rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.25rem 0.7rem;
+      border: 1px solid var(--border);
+      color: var(--sage);
+    }
+
+    /* ─── CTA ─── */
+    #cta {
+      padding: 8rem 0;
+      background: var(--forest);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    #cta::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 70% 70% at 50% 50%, rgba(45,90,61,0.4) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .cta-inner { position: relative; z-index: 1; }
+    .cta-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 5vw, 4.5rem);
+      font-weight: 300;
+      margin-bottom: 1.5rem;
+    }
+    .cta-text {
+      font-size: 0.97rem;
+      color: rgba(245,242,236,0.65);
+      max-width: 560px;
+      margin: 0 auto 3rem;
+      line-height: 1.8;
+    }
+    .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: var(--black);
+      border-top: 1px solid var(--border);
+      padding: 4rem 0 2rem;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 3rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .footer-logo {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.8rem;
+    }
+    .footer-logo span { color: var(--sand); }
+    .footer-desc {
+      font-size: 0.82rem;
+      color: var(--mid-gray);
+      line-height: 1.7;
+      max-width: 240px;
+    }
+    .footer-col-title {
+      font-family: var(--font-mono);
+      font-size: 0.62rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--sand);
+      margin-bottom: 1.2rem;
+    }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+    .footer-links a {
+      font-size: 0.83rem;
+      color: var(--mid-gray);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--sand-light); }
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 2rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .footer-copy {
+      font-family: var(--font-mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--mid-gray);
+    }
+    .footer-compliance {
+      font-family: var(--font-mono);
+      font-size: 0.58rem;
+      color: rgba(138,144,136,0.6);
+      letter-spacing: 0.08em;
+      max-width: 480px;
+      text-align: right;
+      line-height: 1.6;
+    }
+
+    /* ─── SCROLL REVEAL ─── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.65s var(--ease-smooth), transform 0.65s var(--ease-smooth);
+    }
+    .reveal.visible { opacity: 1; transform: none; }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 1024px) {
+      #hero { grid-template-columns: 1fr; min-height: auto; }
+      .hero-left { padding: 9rem 2rem 3rem; }
+      .hero-right { display: none; }
+      .about-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .tech-layout { grid-template-columns: 1fr; gap: 3rem; }
+      .origin-layout { grid-template-columns: 1fr; gap: 3rem; }
+      .trace-layout { grid-template-columns: 1fr; gap: 3rem; }
+      .why-grid { grid-template-columns: repeat(2,1fr); }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+    }
+    @media (max-width: 768px) {
+      .nav-links, .nav-cta { display: none; }
+      .nav-mobile-toggle { display: block; }
+      .nav-links.open {
+        display: flex; flex-direction: column;
+        position: fixed; top: 68px; left: 0; right: 0;
+        background: rgba(11,14,11,0.97);
+        padding: 2rem;
+        gap: 1.5rem;
+        border-bottom: 1px solid var(--border);
+      }
+      .hero-metrics { flex-direction: column; gap: 1.5rem; }
+      .hero-ctas { flex-direction: column; }
+      .why-grid { grid-template-columns: 1fr; }
+      .products-grid { grid-template-columns: 1fr; }
+      .applications-grid { grid-template-columns: 1fr 1fr; }
+      .roadmap-phase { grid-template-columns: 1fr; gap: 0.5rem; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-compliance { text-align: left; }
+      .tech-spec-item { grid-template-columns: 1fr; gap: 0.4rem; }
+      .flow-node { min-width: 130px; padding: 1rem 1.2rem; }
+    }
+    @media (max-width: 500px) {
+      .applications-grid { grid-template-columns: 1fr; }
+      .origin-stats { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══ NAV ═══ -->
+<nav id="main-nav">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo">KET<span>A</span>MIX</a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#about">Platform</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#technical">Specifications</a></li>
+      <li><a href="#origin">Origin</a></li>
+      <li><a href="#applications">B2B</a></li>
+      <li><a href="#roadmap">Roadmap</a></li>
+    </ul>
+    <a href="#cta" class="nav-cta">Contact</a>
+    <button class="nav-mobile-toggle" id="nav-toggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section id="hero">
+  <div class="hero-bg-grid"></div>
+  <div class="hero-bg-gradient"></div>
+
+  <div class="hero-left">
+    <div class="hero-batch-tag">
+      <div class="hero-batch-dot"></div>
+      <span class="label">B2B Botanical Inputs Platform — Morocco</span>
+    </div>
+    <h1 class="hero-title">KETAMIX</h1>
+    <p class="hero-title-sub">Standardized Multi-Ratio Extract-Ready Botanical Inputs</p>
+    <p class="hero-desc">
+      A Moroccan B2B platform transforming classified cannabis biomass into traceable,
+      standardized, extract-ready inputs for regulated value chains.
+    </p>
+    <div class="hero-ctas">
+      <a href="#products" class="btn-primary">
+        Explore Product Families
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="#cta" class="btn-secondary">Request B2B Information</a>
+    </div>
+    <div class="hero-metrics">
+      <div>
+        <div class="hero-metric-val counter" data-target="5">0</div>
+        <div class="hero-metric-label">Product Families</div>
+      </div>
+      <div>
+        <div class="hero-metric-val counter" data-target="100">0</div>
+        <div class="hero-metric-label">% Traceable Batches</div>
+      </div>
+      <div>
+        <div class="hero-metric-val">B2B</div>
+        <div class="hero-metric-label">Exclusive Orientation</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="hero-diagram">
+      <div class="diagram-ring ring-1"></div>
+      <div class="diagram-ring ring-2">
+        <!-- orbit nodes -->
+        <svg style="position:absolute;inset:0;width:100%;height:100%;overflow:visible" viewBox="-190 -190 380 380">
+          <circle cx="0" cy="-190" r="5" fill="var(--sand)" opacity="0.8"/>
+          <circle cx="165" cy="-95" r="3" fill="var(--sage)" opacity="0.9"/>
+          <circle cx="165" cy="95" r="5" fill="var(--sand)" opacity="0.7"/>
+          <circle cx="0" cy="190" r="3" fill="var(--sage)" opacity="0.8"/>
+          <circle cx="-165" cy="95" r="5" fill="var(--sand)" opacity="0.6"/>
+          <circle cx="-165" cy="-95" r="3" fill="var(--sage)" opacity="0.9"/>
+          <line x1="0" y1="-190" x2="0" y2="0" stroke="var(--sand)" stroke-width="0.5" stroke-opacity="0.2" stroke-dasharray="4 4"/>
+          <line x1="165" y1="-95" x2="0" y2="0" stroke="var(--sand)" stroke-width="0.5" stroke-opacity="0.2" stroke-dasharray="4 4"/>
+          <line x1="165" y1="95" x2="0" y2="0" stroke="var(--sand)" stroke-width="0.5" stroke-opacity="0.2" stroke-dasharray="4 4"/>
+        </svg>
+      </div>
+      <div class="diagram-ring ring-3"></div>
+      <div class="diagram-ring ring-4"></div>
+      <div class="diagram-center-text">
+        <span class="label">Extract-Ready</span>
+        <p>Biomass<br/>Intelligence</p>
+      </div>
+      <!-- orbit text labels -->
+      <div style="position:absolute;top:4%;left:50%;transform:translateX(-50%);text-align:center;">
+        <span class="orbit-label">Standardization</span>
+      </div>
+      <div style="position:absolute;top:28%;right:2%;text-align:right;">
+        <span class="orbit-label">Multi-Ratio</span>
+      </div>
+      <div style="position:absolute;bottom:28%;right:2%;text-align:right;">
+        <span class="orbit-label">Traceability</span>
+      </div>
+      <div style="position:absolute;bottom:4%;left:50%;transform:translateX(-50%);text-align:center;">
+        <span class="orbit-label">Batch Logic</span>
+      </div>
+      <div style="position:absolute;bottom:28%;left:2%;">
+        <span class="orbit-label">Classification</span>
+      </div>
+      <div style="position:absolute;top:28%;left:2%;">
+        <span class="orbit-label">COA-Ready</span>
+      </div>
+    </div>
+
+    <div class="hero-data-card">
+      <div class="label" style="margin-bottom:0.8rem;">Sample Batch Card</div>
+      <div class="data-card-row"><span class="data-card-key">Lot</span><span class="data-card-val">KTX-2024-A07</span></div>
+      <div class="data-card-row"><span class="data-card-key">Family</span><span class="data-card-val">CBD Dominant</span></div>
+      <div class="data-card-row"><span class="data-card-key">Origin</span><span class="data-card-val">Rif — Chefchaouen</span></div>
+      <div class="data-card-row"><span class="data-card-key">Profile</span><span class="data-card-val">HD-CBD / &lt;0.2 THC</span></div>
+      <div class="data-card-row"><span class="data-card-key">Grade</span><span class="data-card-val">Extract-Ready A</span></div>
+      <div class="data-card-row"><span class="data-card-key">Status</span><span class="data-card-val" style="color:var(--sage);">Certified</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ ABOUT ═══ -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-left reveal">
+        <div class="section-tag">
+          <span class="label">What Is KETAMIX</span>
+        </div>
+        <h2 class="display-lg">Between Cultivation<br/><em>and</em> Formulation</h2>
+        <p>
+          KETAMIX operates at the critical interface between raw botanical cultivation and
+          advanced formulation. It does not simply supply biomass — it transforms, classifies,
+          and standardizes it into structured, extract-ready intermediates designed for
+          sophisticated industrial use.
+        </p>
+        <p>
+          The platform logic is founded on a principle of multi-ratio cannabinoid architecture:
+          each product family is defined by a deliberate, documented profile — not by harvest
+          chance. Every batch reflects the same industrial discipline, independent of season,
+          volume, or supplier.
+        </p>
+        <p>
+          KETAMIX exists to give B2B processors, formulation developers, and regulated supply
+          chain operators a single, credible, Moroccan-origin botanical input source with the
+          consistency and documentation standards they require.
+        </p>
+        <a href="#products" class="btn-ghost" style="margin-top:2rem;">
+          View Product Families
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+        </a>
+      </div>
+      <div class="about-right">
+        <div class="about-pillars">
+          <div class="about-pillar">
+            <span class="pillar-num">01</span>
+            <div class="pillar-text">
+              <strong>Standardized Botanical Intermediates</strong>
+              <span>Inputs defined by documented profiles, not raw field averages. Each product family carries consistent cannabinoid architecture across batches.</span>
+            </div>
+          </div>
+          <div class="about-pillar">
+            <span class="pillar-num">02</span>
+            <div class="pillar-text">
+              <strong>Multi-Ratio Architecture</strong>
+              <span>KETAMIX classifies biomass by cannabinoid ratio logic — enabling formulators to select inputs aligned with their precise formulation requirements.</span>
+            </div>
+          </div>
+          <div class="about-pillar">
+            <span class="pillar-num">03</span>
+            <div class="pillar-text">
+              <strong>Industrial Discipline</strong>
+              <span>Grading, sorting, moisture control, and pre-extraction suitability are built into the process — not applied retroactively.</span>
+            </div>
+          </div>
+          <div class="about-pillar">
+            <span class="pillar-num">04</span>
+            <div class="pillar-text">
+              <strong>Moroccan Origin, Global Standards</strong>
+              <span>Rooted in Morocco's unique botanical heritage, structured for international B2B market requirements and documentation expectations.</span>
+            </div>
+          </div>
+          <div class="about-pillar">
+            <span class="pillar-num">05</span>
+            <div class="pillar-text">
+              <strong>Extract-Ready Orientation</strong>
+              <span>Every classified lot is prepared with downstream extraction in mind — reducing processor variability and pre-processing costs.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PROCESS FLOW ═══ -->
+<section id="flow">
+  <div class="container">
+    <div class="section-tag reveal">
+      <span class="label">Value Chain Architecture</span>
+    </div>
+    <h2 class="display-md reveal" style="margin-bottom:0;">From Raw Biomass to Extract-Ready Intelligence</h2>
+  </div>
+  <div class="container" style="margin-top:0.5rem; overflow:hidden;">
+    <div class="flow-track">
+      <div class="flow-step">
+        <div class="flow-node">
+          <div class="flow-node-icon">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M14 4C9 4 5 8 5 13c0 3 1.5 5.5 3.8 7H19.2C21.5 18.5 23 16 23 13c0-5-4-9-9-9z" stroke="var(--sage)" stroke-width="1.2" fill="none"/><path d="M14 4v5M9 7l3.5 3.5M19 7l-3.5 3.5" stroke="var(--sage)" stroke-width="1.2" stroke-linecap="round"/></svg>
+          </div>
+          <div class="flow-node-title">Raw Biomass</div>
+          <div class="flow-node-sub">Cultivation Input</div>
+        </div>
+        <div class="flow-arrow"></div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-node">
+          <div class="flow-node-icon">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="5" y="8" width="18" height="13" rx="1" stroke="var(--sage)" stroke-width="1.2"/><path d="M9 8V6a5 5 0 0110 0v2" stroke="var(--sage)" stroke-width="1.2"/><circle cx="14" cy="14" r="2" fill="var(--sage)" opacity="0.6"/></svg>
+          </div>
+          <div class="flow-node-title">Classification</div>
+          <div class="flow-node-sub">Grading & Sorting</div>
+        </div>
+        <div class="flow-arrow"></div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-node">
+          <div class="flow-node-icon">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M7 14h14M7 10h14M7 18h10" stroke="var(--sage)" stroke-width="1.2" stroke-linecap="round"/><circle cx="21" cy="18" r="3" stroke="var(--sage)" stroke-width="1.2"/></svg>
+          </div>
+          <div class="flow-node-title">Standardization</div>
+          <div class="flow-node-sub">Profile Validation</div>
+        </div>
+        <div class="flow-arrow"></div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-node">
+          <div class="flow-node-icon">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="8" y="4" width="12" height="20" rx="2" stroke="var(--sage)" stroke-width="1.2"/><path d="M11 9h6M11 13h6M11 17h4" stroke="var(--sage)" stroke-width="1.2" stroke-linecap="round"/></svg>
+          </div>
+          <div class="flow-node-title">Documentation</div>
+          <div class="flow-node-sub">COA & Batch ID</div>
+        </div>
+        <div class="flow-arrow"></div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-node" style="border-color:rgba(200,169,110,0.4);background:rgba(45,90,61,0.25);">
+          <div class="flow-node-icon">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="9" stroke="var(--sand)" stroke-width="1.2"/><path d="M10 14l2.5 2.5L18 11" stroke="var(--sand)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="flow-node-title" style="color:var(--sand-light);">Extract-Ready</div>
+          <div class="flow-node-sub">B2B Delivery</div>
+        </div>
+        <div class="flow-arrow"></div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-node">
+          <div class="flow-node-icon">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M4 20h20M8 20V12l6-6 6 6v8" stroke="var(--sage)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><rect x="11" y="15" width="6" height="5" stroke="var(--sage)" stroke-width="1.2"/></svg>
+          </div>
+          <div class="flow-node-title">B2B Integration</div>
+          <div class="flow-node-sub">Processing & Formulation</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PRODUCTS ═══ -->
+<section id="products">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-tag">
+        <span class="label">Product Families</span>
+      </div>
+      <h2 class="display-lg">Classified Inputs.<br/>Defined by Ratio Logic.</h2>
+      <p style="max-width:560px;color:rgba(245,242,236,0.6);font-size:0.93rem;margin-top:1rem;line-height:1.8;">
+        Each KETAMIX product family is a structured cannabinoid category — defined by profile,
+        validated by batch, documented for B2B use. Not a commodity. A classified input.
+      </p>
+    </div>
+    <div class="products-grid">
+
+      <!-- CBD Dominant -->
+      <div class="product-card reveal">
+        <div class="product-card-header">
+          <span class="product-tag">CBD Dominant</span>
+          <span class="product-index">PF-01</span>
+        </div>
+        <h3 class="product-name">CBD<br/>Dominant</h3>
+        <p class="product-desc">
+          High-CBD, low-THC biomass standardized for CO₂ and ethanol extraction pathways.
+          Optimized for broad-spectrum and isolate-grade formulation inputs. Consistently
+          graded for pre-extraction suitability across regulated markets.
+        </p>
+        <div class="product-specs">
+          <div class="spec-row">
+            <span class="spec-key">Profile Orientation</span>
+            <span class="spec-val">High-CBD / &lt;0.2% THC</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-key">Primary Use Case</span>
+            <span class="spec-val">Extraction / Isolate Production</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-key">Market Fit</span>
+            <span class="spec-val">EU / International Regulated</span>
+          </div>
+          <div class="product-ratio-bar"><div class="ratio-fill" data-width="88%"></div></div>
+        </div>
+      </div>
+
+      <!-- CBG Rich -->
+      <div class="product-card reveal reveal-delay-1">
+        <div class="product-card-header">
+          <span class="product-tag">CBG Rich</span>
+          <span class="product-index">PF-02</span>
+        </div>
+        <h3 class="product-name">CBG<br/>Rich</h3>
+        <p class="product-desc">
+          Minor cannabinoid-focused biomass targeting CBG-dominant formulation. Early-harvest
+          classification protocol applied to maximize CBG yield potential. Designed for
+          specialized ingredient buyers and advanced extraction platforms.
+        </p>
+        <div class="product-specs">
+          <div class="spec-row">
+            <span class="spec-key">Profile Orientation</span>
+            <span class="spec-val">CBG Primary / CBD Secondary</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-key">Primary Use Case</span>
+            <span class="spec-val">Minor Cannabinoid Formulation</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-key">Market Fit</span>
+            <span class="spec-val">Specialty Ingredient Buyers</span>
+          </div>
+          <div class="product-ratio-bar"><div class="ratio-fill" data-width="72%"></div></div>
+        </div>
+      </div>
+
+      <!-- Balance -->
+      <div class="product-card reveal reveal-delay-2">
+        <div class="product-card-header">
+          <span class="product-tag">Multi-Ratio</span>
+          <span class="product-index">PF-03</span>
+        </div>
+        <h3 class="product-name">Balance</h3>
+        <p class="product-desc">
+          Dual-cannabinoid architecture optimized for full-spectrum extract development.
+          Structured CBD:CBG ratio logic enables reproducible formulation outcomes across
+          batches. Suitable for white-label and toll processing operations.
+        </p>
+        <div class="product-specs">
+          <div class="spec-row">
+            <span class="spec-key">Profile Orientation</span>
+            <span class="spec-val">CBD:CBG Balanced Ratio</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-key">Primary Use Case</span>
+            <span class="spec-val">Full-Spectrum / White-Label</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-key">Market Fit</span>
+            <span class="spec-val">Toll Processing / Formulation</span>
+          </div>
+          <div class="product-ratio-bar"><div class="ratio-fill" data-width="80%"></div></div>
+        </div>
+      </div>
+
+      <!-- Broad Spectrum -->
+      <div class="product-card reveal reveal-delay-1">
+        <div class="product-card-header">
+          <span class="product-tag">Broad Spectrum</span>
+          <span class="product-index">PF-04</span>
+        </div>
+        <h3 class="product-name">Broad<br/>Spectrum</h3>
+        <p class="product-desc">
+          Complex multi-cannabinoid profile engineered for broad-spectrum extract production.
+          Rich secondary compound architecture across terpene and minor cannabinoid fractions.
+          Built for ingredient buyers requiring full botanical complexity.
+        </p>
+        <div class="product-specs">
+          <div class="spec-row">
+            <span class="spec-key">Profile Orientation</span>
+            <span class="spec-val">Multi-Cannabinoid Complex</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-key">Primary Use Case</span>
+            <span class="spec-val">Broad-Spectrum Extract</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-key">Market Fit</span>
+            <span class="spec-val">Advanced Formulation Developers</span>
+          </div>
+          <div class="product-ratio-bar"><div class="ratio-fill" data-width="95%"></div></div>
+        </div>
+      </div>
+
+      <!-- Beldiya THC Dominant -->
+      <div class="product-card reveal reveal-delay-2" style="grid-column: span 1;">
+        <div class="product-card-header">
+          <span class="product-tag" style="background:rgba(200,169,110,0.12);border-color:rgba(200,169,110,0.25);color:var(--sand);">Heritage Series</span>
+          <span class="product-index">PF-05</span>
+        </div>
+        <h3 class="product-name" style="color:var(--sand-light);">Beldiya<br/>THC Dominant</h3>
+        <p class="product-desc">
+          Classified from traditional Moroccan Beldiya cultivars — heritage genetics with
+          documented terroir context. Structured for compliant regulated markets and research
+          partnerships operating within THC-authorized supply frameworks.
+        </p>
+        <div class="product-specs">
+          <div class="spec-row">
+            <span class="spec-key">Profile Orientation</span>
+            <span class="spec-val">THC Dominant / Regulated</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-key">Primary Use Case</span>
+            <span class="spec-val">Authorized Research / Regulated Rx</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-key">Market Fit</span>
+            <span class="spec-val">Licensed Operators Only</span>
+          </div>
+          <div class="product-ratio-bar"><div class="ratio-fill" data-width="65%" style="background:linear-gradient(90deg,var(--sand),var(--sand-light));"></div></div>
+        </div>
+      </div>
+
+    </div>
+    <p style="margin-top:1.5rem;font-family:var(--font-mono);font-size:0.6rem;color:var(--mid-gray);letter-spacing:0.08em;">
+      * All product families are available for B2B qualified operators only. THC-dominant family subject to applicable regulatory frameworks.
+    </p>
+  </div>
+</section>
+
+<!-- ═══ WHY KETAMIX ═══ -->
+<section id="why">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-tag">
+        <span class="label">Platform Pillars</span>
+      </div>
+      <h2 class="display-lg">Why KETAMIX</h2>
+    </div>
+    <div class="why-grid">
+
+      <div class="why-card reveal">
+        <svg class="why-icon" viewBox="0 0 42 42" fill="none"><rect x="6" y="6" width="30" height="30" rx="2" stroke="currentColor" stroke-width="1.3"/><path d="M14 21h14M14 16h8M14 26h10" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/><circle cx="30" cy="16" r="2.5" stroke="currentColor" stroke-width="1.3"/></svg>
+        <h3 class="why-title">Standardization</h3>
+        <p class="why-desc">KETAMIX inputs are defined by documented cannabinoid profiles, not harvest approximations. Every product family carries consistent specifications applicable across production batches — enabling processors to design formulations with input confidence.</p>
+      </div>
+
+      <div class="why-card reveal reveal-delay-1">
+        <svg class="why-icon" viewBox="0 0 42 42" fill="none"><circle cx="21" cy="21" r="14" stroke="currentColor" stroke-width="1.3"/><path d="M21 7v14l8 8" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="21" cy="21" r="3" fill="currentColor" opacity="0.4"/></svg>
+        <h3 class="why-title">Multi-Ratio Logic</h3>
+        <p class="why-desc">Rather than offering single-compound inputs, KETAMIX structures its families around deliberate cannabinoid ratios. This gives formulation developers direct access to defined botanical architectures suited to specific extraction and product development objectives.</p>
+      </div>
+
+      <div class="why-card reveal reveal-delay-2">
+        <svg class="why-icon" viewBox="0 0 42 42" fill="none"><rect x="8" y="12" width="26" height="18" rx="2" stroke="currentColor" stroke-width="1.3"/><path d="M14 8v4M28 8v4M8 18h26" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/><path d="M13 24h4M25 24h4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+        <h3 class="why-title">Batch Consistency</h3>
+        <p class="why-desc">Each KETAMIX lot is classified, graded, and validated before dispatch. The batch logic ensures that technical parameters remain within defined tolerances across production volumes — a core requirement for professional processing and formulation operations.</p>
+      </div>
+
+      <div class="why-card reveal">
+        <svg class="why-icon" viewBox="0 0 42 42" fill="none"><path d="M21 6C13 6 7 12 7 21s6 15 14 15c2 0 4-.4 5.8-1.2" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/><path d="M35 21c0 4-2 7.5-5 9.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/><path d="M21 14v7l4 4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/><path d="M29 8l6 6-6 6" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h3 class="why-title">Moroccan Terroir</h3>
+        <p class="why-desc">Morocco's unique climatic and geographical conditions — particularly in the Rif region — contribute distinct botanical characteristics to cultivated cannabis. KETAMIX captures this origin value within a standardized, documented framework for international B2B markets.</p>
+      </div>
+
+      <div class="why-card reveal reveal-delay-1">
+        <svg class="why-icon" viewBox="0 0 42 42" fill="none"><path d="M8 34l8-10 6 6 6-8 6 12" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/><rect x="6" y="6" width="30" height="28" rx="2" stroke="currentColor" stroke-width="1.3" fill="none"/></svg>
+        <h3 class="why-title">Extract-Ready Classification</h3>
+        <p class="why-desc">KETAMIX biomass is classified not just by cannabinoid content but by pre-extraction suitability — including moisture parameters, morphological grading, and process compatibility. Reducing processor preparation steps and variability from the first input.</p>
+      </div>
+
+      <div class="why-card reveal reveal-delay-2">
+        <svg class="why-icon" viewBox="0 0 42 42" fill="none"><circle cx="21" cy="14" r="6" stroke="currentColor" stroke-width="1.3"/><circle cx="9" cy="32" r="4" stroke="currentColor" stroke-width="1.3"/><circle cx="33" cy="32" r="4" stroke="currentColor" stroke-width="1.3"/><path d="M21 20v4M13 30l4-4M29 30l-4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+        <h3 class="why-title">B2B Supply Intelligence</h3>
+        <p class="why-desc">KETAMIX is designed as a supply intelligence platform — integrating batch documentation, classification data, and traceability logic to support procurement and quality management workflows for professional B2B operators at scale.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TECHNICAL SPECS ═══ -->
+<section id="technical">
+  <div class="container">
+    <div class="tech-layout">
+      <div class="tech-intro reveal">
+        <div class="section-tag">
+          <span class="label">Technical Philosophy</span>
+        </div>
+        <h2 class="display-lg">Specifications<br/>Built for<br/>Industrial Use</h2>
+        <p>
+          KETAMIX applies a structured technical methodology across every stage of biomass
+          processing — from initial field classification through to extract-ready lot release.
+          The approach is designed to eliminate input variability at the processor level.
+        </p>
+        <p style="margin-top:1rem;">
+          Documentation is not a post-process addition. It is built into the classification
+          workflow from the first grading step.
+        </p>
+        <div class="tech-badge">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="5.5" stroke="currentColor" stroke-width="1.1"/><path d="M5 7l1.5 1.5L9 5" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          COA-Oriented Workflow Standard
+        </div>
+      </div>
+      <div class="tech-specs-list">
+        <div class="tech-spec-item">
+          <span class="tech-spec-key">Biomass Classification</span>
+          <span class="tech-spec-val">Multi-tier grading protocol applied at intake. Visual, dimensional, and cannabinoid-profile classification determines family assignment before processing begins.</span>
+        </div>
+        <div class="tech-spec-item">
+          <span class="tech-spec-key">Moisture Control</span>
+          <span class="tech-spec-val">Controlled drying and moisture stabilization protocols applied to all lots. Moisture content validated against extract-ready suitability thresholds before batch release.</span>
+        </div>
+        <div class="tech-spec-item">
+          <span class="tech-spec-key">Cannabinoid Profiling</span>
+          <span class="tech-spec-val">Each batch is analytically profiled to confirm cannabinoid ratio classification. Profiles are validated against family tolerances and documented in batch records.</span>
+        </div>
+        <div class="tech-spec-item">
+          <span class="tech-spec-key">Pre-Extraction Suitability</span>
+          <span class="tech-spec-val">Lot preparation accounts for downstream extraction method compatibility — CO₂, ethanol, hydrocarbon. Particle preparation and contamination screening applied accordingly.</span>
+        </div>
+        <div class="tech-spec-item">
+          <span class="tech-spec-key">Batch Documentation</span>
+          <span class="tech-spec-val">Each classified lot ships with a structured technical record including batch ID, origin data, cannabinoid profile summary, grading outcome, and moisture report.</span>
+        </div>
+        <div class="tech-spec-item">
+          <span class="tech-spec-key">Traceability Integration</span>
+          <span class="tech-spec-val">Batch IDs are structured for integration with QR-coded logistics, digital supply chain platforms, and regulatory documentation workflows where applicable.</span>
+        </div>
+        <div class="tech-spec-item">
+          <span class="tech-spec-key">COA-Ready Workflow</span>
+          <span class="tech-spec-val">Internal processes are structured to support third-party COA issuance. KETAMIX documentation format is designed to align with regulated market compliance expectations.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ MOROCCAN ORIGIN ═══ -->
+<section id="origin">
+  <div class="origin-bg"></div>
+  <div class="container">
+    <div class="origin-layout">
+      <div class="origin-left reveal">
+        <div class="section-tag">
+          <span class="label">Moroccan Origin</span>
+        </div>
+        <h2 class="display-lg">Rif Heritage.<br/>Industrial<br/>Discipline.</h2>
+        <p>
+          Morocco carries one of the world's most historically significant cannabis cultivation
+          traditions — concentrated in the Rif region, where unique climatic, altitudinal, and
+          soil conditions have shaped distinct botanical genetics across generations.
+        </p>
+        <p>
+          KETAMIX positions this origin not as a folkloric reference, but as a traceable
+          botanical asset. Moroccan cultivation provides a genuine competitive distinction —
+          provable, documentable, and increasingly valued within regulated ingredient markets.
+        </p>
+        <p>
+          The Moroccan regulatory transition represents a structural opportunity to redirect
+          this agricultural heritage toward standardized, value-added, internationally
+          compliant botanical supply chains — replacing raw commodity logic with industrial
+          input intelligence.
+        </p>
+
+        <div class="origin-stats">
+          <div class="origin-stat">
+            <div class="origin-stat-val">Rif</div>
+            <div class="origin-stat-label">Heritage Region</div>
+          </div>
+          <div class="origin-stat">
+            <div class="origin-stat-val">100%</div>
+            <div class="origin-stat-label">Moroccan Origin</div>
+          </div>
+          <div class="origin-stat">
+            <div class="origin-stat-val">B2B</div>
+            <div class="origin-stat-label">Exclusive Channel</div>
+          </div>
+          <div class="origin-stat">
+            <div class="origin-stat-val">Gen.</div>
+            <div class="origin-stat-label">Green 2020–2030</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="origin-right reveal reveal-delay-2">
+        <p class="origin-quote">
+          "The value is not in the raw material.<br/>It is in what the raw material becomes."
+        </p>
+        <div class="divider"></div>
+        <div class="origin-values">
+          <div class="origin-value">
+            <div class="origin-value-dot"></div>
+            <span>Cultivation-to-input transformation over raw commodity export</span>
+          </div>
+          <div class="origin-value">
+            <div class="origin-value-dot"></div>
+            <span>Documented terroir context for international ingredient buyers</span>
+          </div>
+          <div class="origin-value">
+            <div class="origin-value-dot"></div>
+            <span>Alignment with Morocco's Generation Green agricultural strategy</span>
+          </div>
+          <div class="origin-value">
+            <div class="origin-value-dot"></div>
+            <span>Transition from informal supply to regulated, traceable value chains</span>
+          </div>
+          <div class="origin-value">
+            <div class="origin-value-dot"></div>
+            <span>Moroccan Beldiya genetics as documented heritage botanical differentiation</span>
+          </div>
+          <div class="origin-value">
+            <div class="origin-value-dot"></div>
+            <span>Strategic positioning within EU and international regulated import frameworks</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ B2B APPLICATIONS ═══ -->
+<section id="applications">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-tag">
+        <span class="label">B2B Applications</span>
+      </div>
+      <h2 class="display-lg">Built for Professional<br/>Partners</h2>
+      <p style="max-width:500px;color:rgba(245,242,236,0.6);font-size:0.93rem;margin-top:1rem;line-height:1.8;">
+        KETAMIX serves distinct professional use cases across the botanical ingredient supply chain.
+        Each channel receives inputs aligned with its specific technical and commercial requirements.
+      </p>
+    </div>
+    <div class="applications-grid">
+
+      <div class="app-card reveal">
+        <svg class="app-icon" viewBox="0 0 36 36" fill="none"><path d="M6 30V14l12-8 12 8v16" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><rect x="13" y="20" width="10" height="10" stroke="currentColor" stroke-width="1.2"/><circle cx="18" cy="10" r="2" stroke="currentColor" stroke-width="1.2"/></svg>
+        <h3 class="app-title">Extraction Partners</h3>
+        <p class="app-desc">Industrial extractors receive classified, pre-validated biomass with consistent cannabinoid profiles. KETAMIX reduces intake variability and pre-processing workload — enabling more predictable extraction yields.</p>
+      </div>
+
+      <div class="app-card reveal reveal-delay-1">
+        <svg class="app-icon" viewBox="0 0 36 36" fill="none"><rect x="5" y="10" width="26" height="18" rx="2" stroke="currentColor" stroke-width="1.2"/><path d="M12 10V7a6 6 0 0112 0v3" stroke="currentColor" stroke-width="1.2"/><path d="M12 20h12M15 24h6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+        <h3 class="app-title">White Label Processors</h3>
+        <p class="app-desc">Contract manufacturers and white-label processors access defined input families that enable consistent batch-to-batch formulation outcomes. Supports premium private-label positioning in regulated markets.</p>
+      </div>
+
+      <div class="app-card reveal reveal-delay-2">
+        <svg class="app-icon" viewBox="0 0 36 36" fill="none"><path d="M10 26L18 8l8 18" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12.5 21h11" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/><circle cx="25" cy="14" r="4" stroke="currentColor" stroke-width="1.2"/></svg>
+        <h3 class="app-title">Formulation Developers</h3>
+        <p class="app-desc">R&D and product development teams gain access to multi-ratio botanical inputs with documented cannabinoid architecture — enabling reproducible formulation development with traceable starting materials.</p>
+      </div>
+
+      <div class="app-card reveal">
+        <svg class="app-icon" viewBox="0 0 36 36" fill="none"><path d="M18 5l11 6v14l-11 6L7 25V11z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/><path d="M18 5v26M7 11l11 6 11-6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+        <h3 class="app-title">Ingredient Buyers</h3>
+        <p class="app-desc">Pharmaceutical, nutraceutical, and cosmetic ingredient procurement teams source classified Moroccan botanical inputs with the documentation and traceability standards their compliance requirements demand.</p>
+      </div>
+
+      <div class="app-card reveal reveal-delay-1">
+        <svg class="app-icon" viewBox="0 0 36 36" fill="none"><circle cx="10" cy="18" r="5" stroke="currentColor" stroke-width="1.2"/><circle cx="26" cy="18" r="5" stroke="currentColor" stroke-width="1.2"/><path d="M15 18h6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/><path d="M10 6v7M26 6v7M10 30v-7M26 30v-7" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+        <h3 class="app-title">Regulated Supply Chains</h3>
+        <p class="app-desc">Operators building compliant botanical supply chains for authorized distribution channels benefit from KETAMIX's batch documentation, COA-ready workflow, and traceable Moroccan-origin framework.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TRACEABILITY ═══ -->
+<section id="traceability">
+  <div class="container">
+    <div class="trace-layout">
+      <div class="trace-left reveal">
+        <div class="section-tag">
+          <span class="label">Batch Intelligence</span>
+        </div>
+        <h2 class="display-lg">Traceability<br/>by Design</h2>
+        <p>
+          KETAMIX is built around batch logic from the ground up. Every classified lot carries
+          a structured identifier that links cultivation origin, classification data, cannabinoid
+          profile validation, and dispatch documentation into a single traceable record.
+        </p>
+        <p style="margin-top:1rem;">
+          This architecture enables B2B partners to integrate KETAMIX inputs directly into
+          their own quality management, procurement, and regulatory documentation workflows —
+          reducing downstream traceability overhead at the processor level.
+        </p>
+        <div class="trace-features">
+          <div class="trace-feature">
+            <svg class="trace-feature-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.1"/><path d="M5.5 8l1.8 1.8L10.5 6" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>Unique batch IDs per classified lot — linked to origin, profile, and dispatch data</span>
+          </div>
+          <div class="trace-feature">
+            <svg class="trace-feature-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.1"/><path d="M5.5 8l1.8 1.8L10.5 6" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>QR-coded lot identification for physical and digital supply chain integration</span>
+          </div>
+          <div class="trace-feature">
+            <svg class="trace-feature-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.1"/><path d="M5.5 8l1.8 1.8L10.5 6" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>Lot-level supply consistency documentation for procurement and compliance teams</span>
+          </div>
+          <div class="trace-feature">
+            <svg class="trace-feature-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.1"/><path d="M5.5 8l1.8 1.8L10.5 6" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>Platform-ready architecture compatible with broader botanical traceability systems</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal reveal-delay-2">
+        <div class="batch-card">
+          <div class="batch-header">
+            <div>
+              <div class="label" style="margin-bottom:0.3rem;font-size:0.55rem;">Batch Record</div>
+              <div class="batch-id">KTX-2024-B14-CBD</div>
+            </div>
+            <div class="batch-status">
+              <div class="batch-status-dot"></div>
+              ACTIVE LOT
+            </div>
+          </div>
+          <div class="batch-rows">
+            <div class="batch-row">
+              <span class="batch-row-key">Origin Region</span>
+              <span class="batch-row-val">Rif — Al Hoceima</span>
+            </div>
+            <div class="batch-row">
+              <span class="batch-row-key">Product Family</span>
+              <span class="batch-row-val">CBD Dominant — PF-01</span>
+            </div>
+            <div class="batch-row">
+              <span class="batch-row-key">Grade</span>
+              <span class="batch-row-val">Extract-Ready / Grade A</span>
+            </div>
+            <div class="batch-row">
+              <span class="batch-row-key">Cannabinoid Profile</span>
+              <span class="batch-row-val">High-CBD / &lt;0.2% THC</span>
+            </div>
+            <div class="batch-row">
+              <span class="batch-row-key">Moisture Status</span>
+              <span class="batch-row-val">Validated — Within Spec</span>
+            </div>
+            <div class="batch-row">
+              <span class="batch-row-key">Documentation</span>
+              <span class="batch-row-val">COA-Ready / Full Record</span>
+            </div>
+            <div class="batch-row">
+              <span class="batch-row-key">Classification Date</span>
+              <span class="batch-row-val">Q4 2024</span>
+            </div>
+            <div class="batch-row">
+              <span class="batch-row-key">Availability</span>
+              <span class="batch-row-val" style="color:var(--sage);">Available — B2B Qualified</span>
+            </div>
+          </div>
+          <div class="batch-qr">
+            <div class="qr-placeholder">
+              <div class="qr-cell"></div><div class="qr-cell"></div><div class="qr-cell"></div><div class="qr-cell"></div>
+              <div class="qr-cell"></div><div class="qr-cell"></div><div class="qr-cell"></div><div class="qr-cell"></div>
+              <div class="qr-cell"></div><div class="qr-cell"></div><div class="qr-cell"></div><div class="qr-cell"></div>
+              <div class="qr-cell"></div><div class="qr-cell"></div><div class="qr-cell"></div><div class="qr-cell"></div>
+            </div>
+            <div class="qr-text">QR-coded lot identification<br/>available for qualified partners</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ ROADMAP ═══ -->
+<section id="roadmap">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-tag">
+        <span class="label">Platform Vision</span>
+      </div>
+      <h2 class="display-lg">A Long-Term<br/>Botanical<br/>Value Chain</h2>
+      <p style="max-width:520px;color:rgba(245,242,236,0.6);font-size:0.93rem;margin-top:1rem;line-height:1.8;">
+        KETAMIX is the foundational layer of a broader botanical intelligence platform.
+        The roadmap moves progressively from input standardization toward advanced ingredient
+        delivery systems and integrated supply chain infrastructure.
+      </p>
+    </div>
+    <div class="roadmap-timeline">
+
+      <div class="roadmap-phase">
+        <div>
+          <div class="roadmap-phase-label">Phase I — Current</div>
+          <div class="roadmap-phase-title">Biomass Classification & Standardization</div>
+        </div>
+        <div class="roadmap-phase-content">
+          <p class="roadmap-phase-desc">Establishing the core classification, grading, and standardization infrastructure. Defining product families. Building batch documentation workflows. Qualifying B2B extraction and processing partners.</p>
+          <div class="roadmap-tags">
+            <span class="roadmap-tag">Biomass Classification</span>
+            <span class="roadmap-tag">Profile Standardization</span>
+            <span class="roadmap-tag">Partner Qualification</span>
+            <span class="roadmap-tag">Batch Documentation</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="roadmap-phase">
+        <div>
+          <div class="roadmap-phase-label">Phase II — Near-Term</div>
+          <div class="roadmap-phase-title">Extract-Ready Input Platform</div>
+        </div>
+        <div class="roadmap-phase-content">
+          <p class="roadmap-phase-desc">Scaling classified lot volumes across all product families. Deploying traceability infrastructure and QR-based batch tracking. Expanding B2B partnerships across EU and MENA processing networks.</p>
+          <div class="roadmap-tags">
+            <span class="roadmap-tag">Traceability Platform</span>
+            <span class="roadmap-tag">Volume Scale</span>
+            <span class="roadmap-tag">EU B2B Partnerships</span>
+            <span class="roadmap-tag">COA Workflow</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="roadmap-phase">
+        <div>
+          <div class="roadmap-phase-label">Phase III — Medium-Term</div>
+          <div class="roadmap-phase-title">Ingredient & Extract Portfolio</div>
+        </div>
+        <div class="roadmap-phase-content">
+          <p class="roadmap-phase-desc">Development of primary extract and botanical ingredient product lines derived from classified KETAMIX inputs. Entry into formulation-ready ingredient supply with standardized cannabinoid extract offerings.</p>
+          <div class="roadmap-tags">
+            <span class="roadmap-tag">Botanical Extracts</span>
+            <span class="roadmap-tag">Ingredient Portfolio</span>
+            <span class="roadmap-tag">Formulation Supply</span>
+            <span class="roadmap-tag">White-Label Integration</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="roadmap-phase">
+        <div>
+          <div class="roadmap-phase-label">Phase IV — Strategic</div>
+          <div class="roadmap-phase-title">Advanced Delivery Systems Platform</div>
+        </div>
+        <div class="roadmap-phase-content">
+          <p class="roadmap-phase-desc">Integration of KETAMIX botanical intelligence into advanced delivery system development — nanoformulation inputs, encapsulation-ready extracts, and precision-dosing supply frameworks for regulated pharmaceutical and nutraceutical markets.</p>
+          <div class="roadmap-tags">
+            <span class="roadmap-tag">Advanced Delivery Systems</span>
+            <span class="roadmap-tag">Pharmaceutical Inputs</span>
+            <span class="roadmap-tag">Nanoformulation</span>
+            <span class="roadmap-tag">Regulated Rx Markets</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CTA ═══ -->
+<section id="cta">
+  <div class="container">
+    <div class="cta-inner reveal">
+      <span class="label" style="display:block;margin-bottom:1.5rem;">Partner With KETAMIX</span>
+      <h2 class="cta-title">Build Better Botanical<br/>Supply Chains</h2>
+      <p class="cta-text">
+        KETAMIX is designed for partners seeking structured, traceable, quality-driven cannabis
+        inputs with a standardized Moroccan origin. B2B enquiries from qualified operators are welcome.
+      </p>
+      <div class="cta-buttons">
+        <a href="mailto:partnerships@ketamix.ma" class="btn-primary">
+          Discuss a Partnership
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="mailto:technical@ketamix.ma" class="btn-secondary">Request Technical Information</a>
+      </div>
+      <p style="margin-top:2rem;font-family:var(--font-mono);font-size:0.6rem;color:rgba(138,144,136,0.5);letter-spacing:0.1em;">
+        KETAMIX operates exclusively within applicable regulatory frameworks. B2B qualified operators only.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">KET<span>A</span>MIX</div>
+        <p class="footer-desc">
+          Standardized Multi-Ratio Extract-Ready Botanical Inputs.<br/>
+          Moroccan origin. Industrial discipline. B2B supply intelligence.
+        </p>
+        <div style="margin-top:1.5rem;display:flex;gap:0.8rem;">
+          <a href="mailto:info@ketamix.ma" style="font-family:var(--font-mono);font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--mid-gray);text-decoration:none;">info@ketamix.ma</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Platform</div>
+        <ul class="footer-links">
+          <li><a href="#about">About KETAMIX</a></li>
+          <li><a href="#products">Product Families</a></li>
+          <li><a href="#why">Platform Pillars</a></li>
+          <li><a href="#technical">Technical Specifications</a></li>
+          <li><a href="#traceability">Batch Intelligence</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Ecosystem</div>
+        <ul class="footer-links">
+          <li><a href="#">Chanvre du Maroc</a></li>
+          <li><a href="#">KETAMIX Lab</a></li>
+          <li><a href="#">Partner Portal</a></li>
+          <li><a href="#roadmap">Roadmap</a></li>
+          <li><a href="#origin">Moroccan Origin</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">B2B</div>
+        <ul class="footer-links">
+          <li><a href="#applications">Applications</a></li>
+          <li><a href="#cta">Partner Enquiries</a></li>
+          <li><a href="#">Technical Information</a></li>
+          <li><a href="#">Regulatory Framework</a></li>
+          <li><a href="#">Qualified Operators</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2024 KETAMIX / Chanvre du Maroc — All Rights Reserved</div>
+      <div class="footer-compliance">
+        KETAMIX products are intended exclusively for qualified B2B operators within applicable
+        legal and regulatory frameworks. No consumer or recreational use claims are made or implied.
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // ─── NAV SCROLL ───
+  const nav = document.getElementById('main-nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 30);
+  }, { passive: true });
+
+  // ─── MOBILE NAV ───
+  const toggle = document.getElementById('nav-toggle');
+  const navLinks = document.getElementById('nav-links');
+  toggle.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+  });
+  navLinks.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => navLinks.classList.remove('open'));
+  });
+
+  // ─── INTERSECTION OBSERVER ───
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll(
+    '.reveal, .about-pillar, .tech-spec-item, .roadmap-phase'
+  ).forEach(el => revealObserver.observe(el));
+
+  // ─── RATIO BAR ANIMATION ───
+  const barObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const fill = entry.target.querySelector('.ratio-fill');
+        if (fill) {
+          const w = fill.getAttribute('data-width') || '80%';
+          setTimeout(() => { fill.style.width = w; }, 200);
+        }
+      }
+    });
+  }, { threshold: 0.3 });
+
+  document.querySelectorAll('.product-card').forEach(card => {
+    const fill = card.querySelector('.ratio-fill');
+    if (fill) { fill.style.width = '0%'; barObserver.observe(card); }
+  });
+
+  // ─── COUNTER ANIMATION ───
+  const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        const target = parseInt(el.getAttribute('data-target'));
+        let current = 0;
+        const step = target / 40;
+        const timer = setInterval(() => {
+          current = Math.min(current + step, target);
+          el.textContent = Math.round(current) + (target === 100 ? '%' : '+');
+          if (current >= target) { el.textContent = target + (target === 100 ? '%' : '+'); clearInterval(timer); }
+        }, 30);
+        counterObserver.unobserve(el);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  document.querySelectorAll('.counter').forEach(el => counterObserver.observe(el));
+
+  // ─── STAGGERED DELAYS FOR ABOUT PILLARS ───
+  document.querySelectorAll('.about-pillar').forEach((el, i) => {
+    el.style.transitionDelay = (i * 0.08) + 's';
+  });
+
+  // ─── STAGGERED DELAYS FOR TECH SPECS ───
+  document.querySelectorAll('.tech-spec-item').forEach((el, i) => {
+    el.style.transitionDelay = (i * 0.07) + 's';
+  });
+
+  // ─── STAGGERED DELAYS FOR ROADMAP ───
+  document.querySelectorAll('.roadmap-phase').forEach((el, i) => {
+    el.style.transitionDelay = (i * 0.12) + 's';
+  });
+</script>
+
+</body>
+</html>
