@@ -1152,7 +1152,34 @@ footer{background:#f4f8f9;border-top:1px solid var(--border)}
 [style*="color:rgba(245,242,236"]{color:var(--mid-gray)!important}
 [style*="color:rgba(138,144,136"]{color:var(--mid-gray)!important}
 .hero-brand-image{box-shadow:0 18px 50px rgba(11,53,80,.12);border:1px solid var(--border)}
+
+/* WCAG AA contrast correction */
+:root{--brand-navy:#082a3a;--brand-teal:#007a78;--text-main:#17313d;--text-secondary:#405866;--surface-soft:#f1f7f8}
+body{color:var(--text-main)}
+.hero-title,.display-xl,.display-lg,.display-md,.product-name,.why-title,.app-title,.cta-title,.footer-logo,.footer-col-title,.diagram-center-text p{color:var(--brand-navy)!important}
+section p,section li,.hero-desc,.product-desc,.why-desc,.app-desc,.origin-left p,.cta-text,.tech-spec-val,.qr-text,.footer-desc,.footer-links a,.body-sm{color:var(--text-secondary)!important}
+.label,.section-tag,.product-index,.spec-key,.data-card-key,.batch-row-key,.origin-stat-label,.hero-metric-label,.orbit-label{color:var(--brand-teal)!important}
+.spec-val,.data-card-val,.batch-row-val,.origin-stat-val,.hero-metric-val,.tech-spec-key{color:var(--brand-navy)!important}
+.nav-logo,.nav-links a,.nav-cta{color:var(--brand-navy)!important}
+.nav-links a:hover,.footer-links a:hover{color:var(--brand-teal)!important}
+.btn-primary,.btn-primary:visited{background:#006f6d!important;border-color:#006f6d!important;color:#fff!important}
+.btn-primary:hover{background:#005b59!important;color:#fff!important}
+.btn-secondary,.btn-secondary:visited{background:#fff!important;border-color:#315564!important;color:var(--brand-navy)!important}
+.btn-secondary:hover{border-color:#007a78!important;color:#006f6d!important}
+.product-tag,.tech-badge{color:#006f6d!important}
+a:focus-visible,button:focus-visible{outline:3px solid #f0a800!important;outline-offset:3px}
+.sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
 </style>
+
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1" />
+  <meta name="theme-color" content="#ffffff" />
+  <meta name="application-name" content="KETAMIX" />
+  <meta name="business-model" content="B2B qualified operators only" />
+  <meta name="regulatory-scope" content="Regulated cannabis supply chains; Morocco Law 13-21" />
+  <link rel="canonical" href="https://ketamixtm.com/" />
+  <link rel="alternate" type="text/plain" href="https://ketamixtm.com/llms.txt" title="KETAMIX information for AI agents" />
+  <link rel="alternate" type="application/json" href="https://ketamixtm.com/agent.json" title="KETAMIX machine-readable catalog" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://ketamixtm.com/#organization","name":"KETAMIX","url":"https://ketamixtm.com/","logo":"https://ketamixtm.com/assets/ketamix-logo.png","email":"info@ketamixtm.com","description":"Moroccan B2B platform supplying standardized, traceable, extract-ready cannabis biomass for regulated value chains.","areaServed":["Morocco","European Union","Switzerland","International regulated markets"],"knowsAbout":["Cannabis biomass standardization","CBD","CBG","Beldiya","Batch traceability","COA","Extract-ready botanical inputs"]},{"@type":"WebSite","@id":"https://ketamixtm.com/#website","url":"https://ketamixtm.com/","name":"KETAMIX","publisher":{"@id":"https://ketamixtm.com/#organization"},"inLanguage":"en"},{"@type":"OfferCatalog","@id":"https://ketamixtm.com/#catalog","name":"KETAMIX Extract-Ready Product Families","provider":{"@id":"https://ketamixtm.com/#organization"},"itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Product","name":"CBD Dominant","category":"Extract-ready cannabis biomass","description":"High-CBD standardized biomass for regulated extraction."}},{"@type":"Offer","itemOffered":{"@type":"Product","name":"CBG Rich","category":"Extract-ready cannabis biomass","description":"CBG-rich standardized biomass for specialized extraction and formulation."}},{"@type":"Offer","itemOffered":{"@type":"Product","name":"Balance","category":"Extract-ready cannabis biomass","description":"Balanced multi-ratio cannabinoid biomass."}},{"@type":"Offer","itemOffered":{"@type":"Product","name":"Broad Spectrum","category":"Extract-ready cannabis biomass","description":"Complex multi-cannabinoid input for broad-spectrum extraction."}},{"@type":"Offer","itemOffered":{"@type":"Product","name":"Kif Beldiya","category":"Regulated THC-dominant cannabis biomass","description":"Moroccan Beldiya heritage biomass for licensed operators and authorized markets."}}]}]}</script>
 </head>
 <body>
 
@@ -1175,8 +1202,16 @@ footer{background:#f4f8f9;border-top:1px solid var(--border)}
   </div>
 </nav>
 
+
+<div class="sr-only" id="agent-summary" data-agent-readable="true" data-entity="KETAMIX" data-business-model="B2B" data-market="regulated-cannabis">
+  <h2>Machine-readable KETAMIX summary</h2>
+  <p>KETAMIX supplies standardized Moroccan cannabis biomass prepared for extraction. Product families: CBD Dominant, CBG Rich, Balance, Broad Spectrum and Kif Beldiya. Specifications include 8–12% moisture, 2–6 mm calibration, batch COA and QR traceability. Transactions and samples are restricted to qualified operators within applicable regulatory frameworks.</p>
+  <a href="/agent.json" rel="alternate">Structured product catalog for autonomous agents</a>
+  <a href="/llms.txt" rel="alternate">Plain-text business context for language models</a>
+</div>
+
 <!-- ═══ HERO ═══ -->
-<section id="hero">
+<main id="main-content"><section id="hero" aria-labelledby="page-title">
   <div class="hero-bg-grid"></div>
   <div class="hero-bg-gradient"></div>
 
@@ -1185,7 +1220,7 @@ footer{background:#f4f8f9;border-top:1px solid var(--border)}
       <div class="hero-batch-dot"></div>
       <span class="label">B2B Botanical Inputs Platform — Morocco</span>
     </div>
-    <h1 class="hero-title">KETAMIX</h1>
+    <h1 class="hero-title" id="page-title">KETAMIX</h1>
     <p class="hero-title-sub">Standardized Moroccan Cannabis Biomass, Ready for Extraction</p>
     <p class="hero-desc">
       CBD, CBG, multi-ratio and Beldiya inputs for licensed extractors, formulators and regulated supply chains.
@@ -2038,6 +2073,8 @@ footer{background:#f4f8f9;border-top:1px solid var(--border)}
     </div>
   </div>
 </section>
+
+</main>
 
 <!-- ═══ FOOTER ═══ -->
 <footer>
