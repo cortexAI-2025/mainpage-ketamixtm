@@ -1184,6 +1184,23 @@ a:focus-visible,button:focus-visible{outline:3px solid #f0a800!important;outline
 .batch-row-val,.batch-id{color:#17313d!important}
 .qr-text{color:#405866!important}
 #traceability .display-lg,#traceability .label{opacity:1!important}
+
+/* Visual-first concise landing page */
+.hero-right{height:calc(100vh - 68px);margin-top:68px;background:url('assets/ketamix-lab.png') center/cover no-repeat;position:relative}
+.hero-right::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,255,255,.04),rgba(8,42,58,.12))}
+.hero-diagram{display:none!important}
+.hero-brand-image{right:2rem;bottom:2rem;width:150px}
+#about,#products,#technical,#origin,#applications,#traceability{padding-top:5.5rem;padding-bottom:5.5rem}
+.about-pillars{grid-template-columns:repeat(3,1fr)}
+.concise-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:2.5rem}
+.concise-card{background:#fff;border:1px solid var(--border);padding:1.5rem;min-height:135px}
+.concise-card h3{color:var(--brand-navy);font-size:1.05rem;margin-bottom:.55rem}
+.concise-card p{font-size:.82rem;line-height:1.55;margin:0!important}
+.origin-visual{width:100%;max-height:620px;object-fit:contain;background:#fff;border:1px solid var(--border)}
+.product-desc{min-height:0!important}
+#why,#roadmap{display:none!important}
+@media(max-width:900px){.hero-right{height:48vh;margin-top:0}.about-pillars,.concise-grid{grid-template-columns:1fr 1fr}.hero-brand-image{display:block;width:100px;right:1rem;bottom:1rem}}
+@media(max-width:560px){.about-pillars,.concise-grid{grid-template-columns:1fr}}
 </style>
 
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1" />
@@ -1208,7 +1225,6 @@ a:focus-visible,button:focus-visible{outline:3px solid #f0a800!important;outline
       <li><a href="#technical">Specifications</a></li>
       <li><a href="#origin">Origin</a></li>
       <li><a href="#applications">B2B</a></li>
-      <li><a href="#roadmap">Roadmap</a></li>
     </ul>
     <a href="#cta" class="nav-cta">Contact</a>
     <button class="nav-mobile-toggle" id="nav-toggle" aria-label="Menu">
@@ -1328,73 +1344,15 @@ a:focus-visible,button:focus-visible{outline:3px solid #f0a800!important;outline
 <!-- ═══ ABOUT ═══ -->
 <section id="about">
   <div class="container">
-    <div class="about-grid">
-      <div class="about-left reveal">
-        <div class="section-tag">
-          <span class="label">What Is KETAMIX</span>
-        </div>
-        <h2 class="display-lg">Between Cultivation<br/><em>and</em> Formulation</h2>
-        <p>
-          KETAMIX operates at the critical interface between raw botanical cultivation and
-          advanced formulation. It does not simply supply biomass — it transforms, classifies,
-          and standardizes it into structured, extract-ready intermediates designed for
-          sophisticated industrial use.
-        </p>
-        <p>
-          The platform logic is founded on a principle of multi-ratio cannabinoid architecture:
-          each product family is defined by a deliberate, documented profile — not by harvest
-          chance. Every batch reflects the same industrial discipline, independent of season,
-          volume, or supplier.
-        </p>
-        <p>
-          KETAMIX exists to give B2B processors, formulation developers, and regulated supply
-          chain operators a single, credible, Moroccan-origin botanical input source with the
-          consistency and documentation standards they require.
-        </p>
-        <a href="#products" class="btn-ghost" style="margin-top:2rem;">
-          View Product Families
-          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
-        </a>
-      </div>
-      <div class="about-right">
-        <div class="about-pillars">
-          <div class="about-pillar">
-            <span class="pillar-num">01</span>
-            <div class="pillar-text">
-              <strong>Standardized Botanical Intermediates</strong>
-              <span>Inputs defined by documented profiles, not raw field averages. Each product family carries consistent cannabinoid architecture across batches.</span>
-            </div>
-          </div>
-          <div class="about-pillar">
-            <span class="pillar-num">02</span>
-            <div class="pillar-text">
-              <strong>Multi-Ratio Architecture</strong>
-              <span>KETAMIX classifies biomass by cannabinoid ratio logic — enabling formulators to select inputs aligned with their precise formulation requirements.</span>
-            </div>
-          </div>
-          <div class="about-pillar">
-            <span class="pillar-num">03</span>
-            <div class="pillar-text">
-              <strong>Industrial Discipline</strong>
-              <span>Grading, sorting, moisture control, and pre-extraction suitability are built into the process — not applied retroactively.</span>
-            </div>
-          </div>
-          <div class="about-pillar">
-            <span class="pillar-num">04</span>
-            <div class="pillar-text">
-              <strong>Moroccan Origin, Global Standards</strong>
-              <span>Rooted in Morocco's unique botanical heritage, structured for international B2B market requirements and documentation expectations.</span>
-            </div>
-          </div>
-          <div class="about-pillar">
-            <span class="pillar-num">05</span>
-            <div class="pillar-text">
-              <strong>Extract-Ready Orientation</strong>
-              <span>Every classified lot is prepared with downstream extraction in mind — reducing processor variability and pre-processing costs.</span>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="section-header reveal">
+      <div class="section-tag"><span class="label">What Is KETAMIX</span></div>
+      <h2 class="display-lg">From Moroccan biomass<br/>to standardized input.</h2>
+      <p style="max-width:650px;margin-top:1rem;">KETAMIX classifies, prepares and documents cannabis biomass for professional extraction.</p>
+    </div>
+    <div class="about-pillars">
+      <div class="about-pillar"><span class="pillar-num">01</span><div class="pillar-text"><strong>Standardized</strong><span>Defined profiles and tolerances.</span></div></div>
+      <div class="about-pillar"><span class="pillar-num">02</span><div class="pillar-text"><strong>Extract-ready</strong><span>8–12% moisture · 2–6 mm calibration.</span></div></div>
+      <div class="about-pillar"><span class="pillar-num">03</span><div class="pillar-text"><strong>Traceable</strong><span>Batch ID · COA workflow · QR record.</span></div></div>
     </div>
   </div>
 </section>
@@ -1494,11 +1452,7 @@ a:focus-visible,button:focus-visible{outline:3px solid #f0a800!important;outline
           <span class="product-index">PF-01</span>
         </div>
         <img class="product-image" src="assets/ketamix-cbd-dominant.png" alt="KETAMIX CBD Dominant extract-ready biomass packaging" loading="lazy"/><h3 class="product-name">CBD<br/>Dominant</h3>
-        <p class="product-desc">
-          High-CBD, low-THC biomass standardized for CO₂ and ethanol extraction pathways.
-          Optimized for broad-spectrum and isolate-grade formulation inputs. Consistently
-          graded for pre-extraction suitability across regulated markets.
-        </p>
+        <p class="product-desc">High-CBD biomass prepared for consistent extraction.</p>
         <div class="product-specs">
           <div class="spec-row">
             <span class="spec-key">Profile Orientation</span>
@@ -1523,11 +1477,7 @@ a:focus-visible,button:focus-visible{outline:3px solid #f0a800!important;outline
           <span class="product-index">PF-02</span>
         </div>
         <img class="product-image" src="assets/ketamix-cbg-rich.png" alt="KETAMIX CBG Rich extract-ready biomass packaging" loading="lazy"/><h3 class="product-name">CBG<br/>Rich</h3>
-        <p class="product-desc">
-          Minor cannabinoid-focused biomass targeting CBG-dominant formulation. Early-harvest
-          classification protocol applied to maximize CBG yield potential. Designed for
-          specialized ingredient buyers and advanced extraction platforms.
-        </p>
+        <p class="product-desc">CBG-rich biomass for specialized cannabinoid formulations.</p>
         <div class="product-specs">
           <div class="spec-row">
             <span class="spec-key">Profile Orientation</span>
@@ -1552,11 +1502,7 @@ a:focus-visible,button:focus-visible{outline:3px solid #f0a800!important;outline
           <span class="product-index">PF-03</span>
         </div>
         <img class="product-image" src="assets/ketamix-balance.png" alt="KETAMIX Balance extract-ready biomass packaging" loading="lazy"/><h3 class="product-name">Balance</h3>
-        <p class="product-desc">
-          Dual-cannabinoid architecture optimized for full-spectrum extract development.
-          Structured CBD:CBG ratio logic enables reproducible formulation outcomes across
-          batches. Suitable for white-label and toll processing operations.
-        </p>
+        <p class="product-desc">Balanced cannabinoid input for reproducible full-spectrum extracts.</p>
         <div class="product-specs">
           <div class="spec-row">
             <span class="spec-key">Profile Orientation</span>
@@ -1581,11 +1527,7 @@ a:focus-visible,button:focus-visible{outline:3px solid #f0a800!important;outline
           <span class="product-index">PF-04</span>
         </div>
         <h3 class="product-name">Broad<br/>Spectrum</h3>
-        <p class="product-desc">
-          Complex multi-cannabinoid profile engineered for broad-spectrum extract production.
-          Rich secondary compound architecture across terpene and minor cannabinoid fractions.
-          Built for ingredient buyers requiring full botanical complexity.
-        </p>
+        <p class="product-desc">Multi-cannabinoid biomass preserving broader botanical complexity.</p>
         <div class="product-specs">
           <div class="spec-row">
             <span class="spec-key">Profile Orientation</span>
@@ -1610,11 +1552,7 @@ a:focus-visible,button:focus-visible{outline:3px solid #f0a800!important;outline
           <span class="product-index">PF-05</span>
         </div>
         <img class="product-image" src="assets/ketamix-kif-beldiya.png" alt="KETAMIX Kif Beldiya extract-ready biomass packaging" loading="lazy"/><h3 class="product-name" style="color:var(--sand-light);">Beldiya<br/>THC Dominant</h3>
-        <p class="product-desc">
-          Classified from traditional Moroccan Beldiya cultivars — heritage genetics with
-          documented terroir context. Structured for compliant regulated markets and research
-          partnerships operating within THC-authorized supply frameworks.
-        </p>
+        <p class="product-desc">Moroccan Beldiya heritage biomass for licensed operators.</p>
         <div class="product-specs">
           <div class="spec-row">
             <span class="spec-key">Profile Orientation</span>
@@ -1695,54 +1633,15 @@ a:focus-visible,button:focus-visible{outline:3px solid #f0a800!important;outline
   <div class="container">
     <div class="tech-layout">
       <div class="tech-intro reveal">
-        <div class="section-tag">
-          <span class="label">Technical Philosophy</span>
-        </div>
-        <h2 class="display-lg">Specifications<br/>Built for<br/>Industrial Use</h2>
-        <p>
-          KETAMIX applies a structured technical methodology across every stage of biomass
-          processing — from initial field classification through to extract-ready lot release.
-          The approach is designed to eliminate input variability at the processor level.
-        </p>
-        <p style="margin-top:1rem;">
-          Documentation is not a post-process addition. It is built into the classification
-          workflow from the first grading step.
-        </p>
-        <div class="tech-badge">
-          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="5.5" stroke="currentColor" stroke-width="1.1"/><path d="M5 7l1.5 1.5L9 5" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          COA-Oriented Workflow Standard
-        </div>
+        <div class="section-tag"><span class="label">Technical Proof</span></div>
+        <h2 class="display-lg">Prepared for<br/>industrial extraction.</h2>
         <img class="lab-proof-image" src="assets/ketamix-lab.png" alt="KETAMIX laboratory quality-control workflow" loading="lazy"/>
       </div>
-      <div class="tech-specs-list">
-        <div class="tech-spec-item">
-          <span class="tech-spec-key">Biomass Classification</span>
-          <span class="tech-spec-val">Multi-tier grading protocol applied at intake. Visual, dimensional, and cannabinoid-profile classification determines family assignment before processing begins.</span>
-        </div>
-        <div class="tech-spec-item">
-          <span class="tech-spec-key">Moisture Control</span>
-          <span class="tech-spec-val">Controlled drying and moisture stabilization protocols applied to all lots. Moisture content validated against extract-ready suitability thresholds before batch release.</span>
-        </div>
-        <div class="tech-spec-item">
-          <span class="tech-spec-key">Cannabinoid Profiling</span>
-          <span class="tech-spec-val">Each batch is analytically profiled to confirm cannabinoid ratio classification. Profiles are validated against family tolerances and documented in batch records.</span>
-        </div>
-        <div class="tech-spec-item">
-          <span class="tech-spec-key">Pre-Extraction Suitability</span>
-          <span class="tech-spec-val">Lot preparation accounts for downstream extraction method compatibility — CO₂, ethanol, hydrocarbon. Particle preparation and contamination screening applied accordingly.</span>
-        </div>
-        <div class="tech-spec-item">
-          <span class="tech-spec-key">Batch Documentation</span>
-          <span class="tech-spec-val">Each classified lot ships with a structured technical record including batch ID, origin data, cannabinoid profile summary, grading outcome, and moisture report.</span>
-        </div>
-        <div class="tech-spec-item">
-          <span class="tech-spec-key">Traceability Integration</span>
-          <span class="tech-spec-val">Batch IDs are structured for integration with QR-coded logistics, digital supply chain platforms, and regulatory documentation workflows where applicable.</span>
-        </div>
-        <div class="tech-spec-item">
-          <span class="tech-spec-key">COA-Ready Workflow</span>
-          <span class="tech-spec-val">Internal processes are structured to support third-party COA issuance. KETAMIX documentation format is designed to align with regulated market compliance expectations.</span>
-        </div>
+      <div class="concise-grid" style="grid-template-columns:1fr 1fr;">
+        <div class="concise-card"><h3>8–12% moisture</h3><p>Controlled and recorded before lot release.</p></div>
+        <div class="concise-card"><h3>2–6 mm calibration</h3><p>Consistent particle preparation for extraction.</p></div>
+        <div class="concise-card"><h3>Profile validation</h3><p>Cannabinoid classification supported by batch analysis.</p></div>
+        <div class="concise-card"><h3>COA + QR record</h3><p>Lot-level documentation for qualified partners.</p></div>
       </div>
     </div>
   </div>
@@ -1750,82 +1649,20 @@ a:focus-visible,button:focus-visible{outline:3px solid #f0a800!important;outline
 
 <!-- ═══ MOROCCAN ORIGIN ═══ -->
 <section id="origin">
-  <div class="origin-bg"></div>
   <div class="container">
     <div class="origin-layout">
       <div class="origin-left reveal">
-        <div class="section-tag">
-          <span class="label">Moroccan Origin</span>
-        </div>
-        <h2 class="display-lg">Rif Heritage.<br/>Industrial<br/>Discipline.</h2>
-        <p>
-          Morocco carries one of the world's most historically significant cannabis cultivation
-          traditions — concentrated in the Rif region, where unique climatic, altitudinal, and
-          soil conditions have shaped distinct botanical genetics across generations.
-        </p>
-        <p>
-          KETAMIX positions this origin not as a folkloric reference, but as a traceable
-          botanical asset. Moroccan cultivation provides a genuine competitive distinction —
-          provable, documentable, and increasingly valued within regulated ingredient markets.
-        </p>
-        <p>
-          The Moroccan regulatory transition represents a structural opportunity to redirect
-          this agricultural heritage toward standardized, value-added, internationally
-          compliant botanical supply chains — replacing raw commodity logic with industrial
-          input intelligence.
-        </p>
-
+        <div class="section-tag"><span class="label">Moroccan Origin</span></div>
+        <h2 class="display-lg">Rif heritage.<br/>Industrial discipline.</h2>
+        <p>Moroccan Beldiya and selected cannabinoid profiles, transformed into documented B2B inputs for regulated markets.</p>
         <div class="origin-stats">
-          <div class="origin-stat">
-            <div class="origin-stat-val">Rif</div>
-            <div class="origin-stat-label">Heritage Region</div>
-          </div>
-          <div class="origin-stat">
-            <div class="origin-stat-val">100%</div>
-            <div class="origin-stat-label">Moroccan Origin</div>
-          </div>
-          <div class="origin-stat">
-            <div class="origin-stat-val">B2B</div>
-            <div class="origin-stat-label">Exclusive Channel</div>
-          </div>
-          <div class="origin-stat">
-            <div class="origin-stat-val">Gen.</div>
-            <div class="origin-stat-label">Green 2020–2030</div>
-          </div>
+          <div class="origin-stat"><div class="origin-stat-val">Rif</div><div class="origin-stat-label">Heritage</div></div>
+          <div class="origin-stat"><div class="origin-stat-val">100%</div><div class="origin-stat-label">Moroccan origin</div></div>
+          <div class="origin-stat"><div class="origin-stat-val">B2B</div><div class="origin-stat-label">Qualified operators</div></div>
         </div>
       </div>
-
-      <div class="origin-right reveal reveal-delay-2">
-        <p class="origin-quote">
-          "The value is not in the raw material.<br/>It is in what the raw material becomes."
-        </p>
-        <div class="divider"></div>
-        <div class="origin-values">
-          <div class="origin-value">
-            <div class="origin-value-dot"></div>
-            <span>Cultivation-to-input transformation over raw commodity export</span>
-          </div>
-          <div class="origin-value">
-            <div class="origin-value-dot"></div>
-            <span>Documented terroir context for international ingredient buyers</span>
-          </div>
-          <div class="origin-value">
-            <div class="origin-value-dot"></div>
-            <span>Alignment with Morocco's Generation Green agricultural strategy</span>
-          </div>
-          <div class="origin-value">
-            <div class="origin-value-dot"></div>
-            <span>Transition from informal supply to regulated, traceable value chains</span>
-          </div>
-          <div class="origin-value">
-            <div class="origin-value-dot"></div>
-            <span>Moroccan Beldiya genetics as documented heritage botanical differentiation</span>
-          </div>
-          <div class="origin-value">
-            <div class="origin-value-dot"></div>
-            <span>Strategic positioning within EU and international regulated import frameworks</span>
-          </div>
-        </div>
+      <div class="origin-right reveal reveal-delay-1">
+        <img class="origin-visual" src="assets/ketamix-kif-beldiya.png" alt="KETAMIX Kif Beldiya Moroccan extract-ready biomass packaging" loading="lazy"/>
       </div>
     </div>
   </div>
@@ -1835,47 +1672,14 @@ a:focus-visible,button:focus-visible{outline:3px solid #f0a800!important;outline
 <section id="applications">
   <div class="container">
     <div class="section-header reveal">
-      <div class="section-tag">
-        <span class="label">B2B Applications</span>
-      </div>
-      <h2 class="display-lg">Built for Professional<br/>Partners</h2>
-      <p style="max-width:500px;color:rgba(245,242,236,0.6);font-size:0.93rem;margin-top:1rem;line-height:1.8;">
-        KETAMIX serves distinct professional use cases across the botanical ingredient supply chain.
-        Each channel receives inputs aligned with its specific technical and commercial requirements.
-      </p>
+      <div class="section-tag"><span class="label">B2B Applications</span></div>
+      <h2 class="display-lg">Built for professional partners.</h2>
     </div>
-    <div class="applications-grid">
-
-      <div class="app-card reveal">
-        <svg class="app-icon" viewBox="0 0 36 36" fill="none"><path d="M6 30V14l12-8 12 8v16" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><rect x="13" y="20" width="10" height="10" stroke="currentColor" stroke-width="1.2"/><circle cx="18" cy="10" r="2" stroke="currentColor" stroke-width="1.2"/></svg>
-        <h3 class="app-title">Extraction Partners</h3>
-        <p class="app-desc">Industrial extractors receive classified, pre-validated biomass with consistent cannabinoid profiles. KETAMIX reduces intake variability and pre-processing workload — enabling more predictable extraction yields.</p>
-      </div>
-
-      <div class="app-card reveal reveal-delay-1">
-        <svg class="app-icon" viewBox="0 0 36 36" fill="none"><rect x="5" y="10" width="26" height="18" rx="2" stroke="currentColor" stroke-width="1.2"/><path d="M12 10V7a6 6 0 0112 0v3" stroke="currentColor" stroke-width="1.2"/><path d="M12 20h12M15 24h6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
-        <h3 class="app-title">White Label Processors</h3>
-        <p class="app-desc">Contract manufacturers and white-label processors access defined input families that enable consistent batch-to-batch formulation outcomes. Supports premium private-label positioning in regulated markets.</p>
-      </div>
-
-      <div class="app-card reveal reveal-delay-2">
-        <svg class="app-icon" viewBox="0 0 36 36" fill="none"><path d="M10 26L18 8l8 18" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12.5 21h11" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/><circle cx="25" cy="14" r="4" stroke="currentColor" stroke-width="1.2"/></svg>
-        <h3 class="app-title">Formulation Developers</h3>
-        <p class="app-desc">R&D and product development teams gain access to multi-ratio botanical inputs with documented cannabinoid architecture — enabling reproducible formulation development with traceable starting materials.</p>
-      </div>
-
-      <div class="app-card reveal">
-        <svg class="app-icon" viewBox="0 0 36 36" fill="none"><path d="M18 5l11 6v14l-11 6L7 25V11z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/><path d="M18 5v26M7 11l11 6 11-6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
-        <h3 class="app-title">Ingredient Buyers</h3>
-        <p class="app-desc">Pharmaceutical, nutraceutical, and cosmetic ingredient procurement teams source classified Moroccan botanical inputs with the documentation and traceability standards their compliance requirements demand.</p>
-      </div>
-
-      <div class="app-card reveal reveal-delay-1">
-        <svg class="app-icon" viewBox="0 0 36 36" fill="none"><circle cx="10" cy="18" r="5" stroke="currentColor" stroke-width="1.2"/><circle cx="26" cy="18" r="5" stroke="currentColor" stroke-width="1.2"/><path d="M15 18h6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/><path d="M10 6v7M26 6v7M10 30v-7M26 30v-7" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
-        <h3 class="app-title">Regulated Supply Chains</h3>
-        <p class="app-desc">Operators building compliant botanical supply chains for authorized distribution channels benefit from KETAMIX's batch documentation, COA-ready workflow, and traceable Moroccan-origin framework.</p>
-      </div>
-
+    <div class="concise-grid">
+      <div class="concise-card"><h3>Extractors</h3><p>Predictable intake and preparation.</p></div>
+      <div class="concise-card"><h3>Formulators</h3><p>Defined cannabinoid architectures.</p></div>
+      <div class="concise-card"><h3>Ingredient buyers</h3><p>Documented Moroccan-origin inputs.</p></div>
+      <div class="concise-card"><h3>Regulated supply chains</h3><p>COA-ready batch documentation.</p></div>
     </div>
   </div>
 </section>
@@ -1885,42 +1689,16 @@ a:focus-visible,button:focus-visible{outline:3px solid #f0a800!important;outline
   <div class="container">
     <div class="trace-layout">
       <div class="trace-left reveal">
-        <div class="section-tag">
-          <span class="label">Batch Intelligence</span>
-        </div>
-        <h2 class="display-lg">Traceability<br/>by Design</h2>
-        <p>
-          KETAMIX is built around batch logic from the ground up. Every classified lot carries
-          a structured identifier that links cultivation origin, classification data, cannabinoid
-          profile validation, and dispatch documentation into a single traceable record.
-        </p>
-        <p style="margin-top:1rem;">
-          This architecture enables B2B partners to integrate KETAMIX inputs directly into
-          their own quality management, procurement, and regulatory documentation workflows —
-          reducing downstream traceability overhead at the processor level.
-        </p>
+        <div class="section-tag"><span class="label">Batch Intelligence</span></div>
+        <h2 class="display-lg">One lot.<br/>One verifiable record.</h2>
+        <p>Origin, profile, moisture, grade and documentation remain connected through a unique batch identifier.</p>
         <div class="trace-features">
-          <div class="trace-feature">
-            <svg class="trace-feature-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.1"/><path d="M5.5 8l1.8 1.8L10.5 6" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <span>Unique batch IDs per classified lot — linked to origin, profile, and dispatch data</span>
-          </div>
-          <div class="trace-feature">
-            <svg class="trace-feature-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.1"/><path d="M5.5 8l1.8 1.8L10.5 6" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <span>QR-coded lot identification for physical and digital supply chain integration</span>
-          </div>
-          <div class="trace-feature">
-            <svg class="trace-feature-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.1"/><path d="M5.5 8l1.8 1.8L10.5 6" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <span>Lot-level supply consistency documentation for procurement and compliance teams</span>
-          </div>
-          <div class="trace-feature">
-            <svg class="trace-feature-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.1"/><path d="M5.5 8l1.8 1.8L10.5 6" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <span>Platform-ready architecture compatible with broader botanical traceability systems</span>
-          </div>
+          <div class="trace-feature"><span>✓ Unique batch ID</span></div>
+          <div class="trace-feature"><span>✓ QR-compatible record</span></div>
+          <div class="trace-feature"><span>✓ COA-oriented documentation</span></div>
         </div>
       </div>
-
-      <div class="reveal reveal-delay-2">
-        <div class="batch-card">
+      <div class="reveal reveal-delay-1"><div class="batch-card">
           <div class="batch-header">
             <div>
               <div class="label" style="margin-bottom:0.3rem;font-size:0.55rem;">Batch Record</div>
@@ -1975,94 +1753,12 @@ a:focus-visible,button:focus-visible{outline:3px solid #f0a800!important;outline
             <div class="qr-text">QR-coded lot identification<br/>available for qualified partners</div>
           </div>
         </div>
-      </div>
     </div>
   </div>
 </section>
 
 <!-- ═══ ROADMAP ═══ -->
-<section id="roadmap">
-  <div class="container">
-    <div class="section-header reveal">
-      <div class="section-tag">
-        <span class="label">Platform Vision</span>
-      </div>
-      <h2 class="display-lg">A Long-Term<br/>Botanical<br/>Value Chain</h2>
-      <p style="max-width:520px;color:rgba(245,242,236,0.6);font-size:0.93rem;margin-top:1rem;line-height:1.8;">
-        KETAMIX is the foundational layer of a broader botanical intelligence platform.
-        The roadmap moves progressively from input standardization toward advanced ingredient
-        delivery systems and integrated supply chain infrastructure.
-      </p>
-    </div>
-    <div class="roadmap-timeline">
 
-      <div class="roadmap-phase">
-        <div>
-          <div class="roadmap-phase-label">Phase I — Current</div>
-          <div class="roadmap-phase-title">Biomass Classification & Standardization</div>
-        </div>
-        <div class="roadmap-phase-content">
-          <p class="roadmap-phase-desc">Establishing the core classification, grading, and standardization infrastructure. Defining product families. Building batch documentation workflows. Qualifying B2B extraction and processing partners.</p>
-          <div class="roadmap-tags">
-            <span class="roadmap-tag">Biomass Classification</span>
-            <span class="roadmap-tag">Profile Standardization</span>
-            <span class="roadmap-tag">Partner Qualification</span>
-            <span class="roadmap-tag">Batch Documentation</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="roadmap-phase">
-        <div>
-          <div class="roadmap-phase-label">Phase II — Near-Term</div>
-          <div class="roadmap-phase-title">Extract-Ready Input Platform</div>
-        </div>
-        <div class="roadmap-phase-content">
-          <p class="roadmap-phase-desc">Scaling classified lot volumes across all product families. Deploying traceability infrastructure and QR-based batch tracking. Expanding B2B partnerships across EU and MENA processing networks.</p>
-          <div class="roadmap-tags">
-            <span class="roadmap-tag">Traceability Platform</span>
-            <span class="roadmap-tag">Volume Scale</span>
-            <span class="roadmap-tag">EU B2B Partnerships</span>
-            <span class="roadmap-tag">COA Workflow</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="roadmap-phase">
-        <div>
-          <div class="roadmap-phase-label">Phase III — Medium-Term</div>
-          <div class="roadmap-phase-title">Ingredient & Extract Portfolio</div>
-        </div>
-        <div class="roadmap-phase-content">
-          <p class="roadmap-phase-desc">Development of primary extract and botanical ingredient product lines derived from classified KETAMIX inputs. Entry into formulation-ready ingredient supply with standardized cannabinoid extract offerings.</p>
-          <div class="roadmap-tags">
-            <span class="roadmap-tag">Botanical Extracts</span>
-            <span class="roadmap-tag">Ingredient Portfolio</span>
-            <span class="roadmap-tag">Formulation Supply</span>
-            <span class="roadmap-tag">White-Label Integration</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="roadmap-phase">
-        <div>
-          <div class="roadmap-phase-label">Phase IV — Strategic</div>
-          <div class="roadmap-phase-title">Advanced Delivery Systems Platform</div>
-        </div>
-        <div class="roadmap-phase-content">
-          <p class="roadmap-phase-desc">Integration of KETAMIX botanical intelligence into advanced delivery system development — nanoformulation inputs, encapsulation-ready extracts, and precision-dosing supply frameworks for regulated pharmaceutical and nutraceutical markets.</p>
-          <div class="roadmap-tags">
-            <span class="roadmap-tag">Advanced Delivery Systems</span>
-            <span class="roadmap-tag">Pharmaceutical Inputs</span>
-            <span class="roadmap-tag">Nanoformulation</span>
-            <span class="roadmap-tag">Regulated Rx Markets</span>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
 
 <!-- ═══ CTA ═══ -->
 <section id="cta">
@@ -2110,7 +1806,6 @@ a:focus-visible,button:focus-visible{outline:3px solid #f0a800!important;outline
         <ul class="footer-links">
           <li><a href="#about">About KETAMIX</a></li>
           <li><a href="#products">Product Families</a></li>
-          <li><a href="#why">Platform Pillars</a></li>
           <li><a href="#technical">Technical Specifications</a></li>
           <li><a href="#traceability">Batch Intelligence</a></li>
         </ul>
@@ -2118,9 +1813,7 @@ a:focus-visible,button:focus-visible{outline:3px solid #f0a800!important;outline
       <div>
         <div class="footer-col-title">Ecosystem</div>
         <ul class="footer-links">
-          <li><a href="#">KETAMIX Lab</a></li>
           <li><a href="#">Partner Portal</a></li>
-          <li><a href="#roadmap">Roadmap</a></li>
           <li><a href="#origin">Moroccan Origin</a></li>
         </ul>
       </div>
