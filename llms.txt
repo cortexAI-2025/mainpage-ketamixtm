@@ -1,0 +1,36 @@
+# KETAMIX
+
+> Standardized Moroccan cannabis biomass, ready for extraction.
+
+KETAMIX is a B2B platform for qualified operators in regulated cannabis value chains. It classifies, standardizes and documents Moroccan-origin biomass for extraction and formulation.
+
+## Official website
+- https://ketamixtm.com/
+
+## Product families
+- CBD Dominant: high-CBD standardized biomass.
+- CBG Rich: CBG-rich standardized biomass.
+- Balance: balanced multi-ratio cannabinoid biomass.
+- Broad Spectrum: multi-cannabinoid biomass.
+- Kif Beldiya: Moroccan heritage THC-dominant biomass, restricted to licensed operators and authorized markets.
+
+## Core specifications
+- Moisture: 8–12%.
+- Calibration: 2–6 mm.
+- Documentation: batch ID, cannabinoid profile, moisture report and third-party COA workflow.
+- Traceability: QR-compatible batch records.
+- Origin: Morocco, including Rif heritage supply chains.
+- Regulatory context: Morocco Law 13-21 and applicable destination-market rules.
+- Commercial scope: B2B only; qualified operators; no consumer sales.
+
+## Agent actions
+- Request specifications: mailto:technical@ketamixtm.com
+- Request a sample: mailto:partnerships@ketamixtm.com?subject=KETAMIX%20Sample%20Request
+- Discuss volume and pricing: mailto:partnerships@ketamixtm.com?subject=KETAMIX%20Volume%20and%20Pricing
+- General contact: mailto:info@ketamixtm.com
+
+## Machine-readable resources
+- Product and business catalog: https://ketamixtm.com/agent.json
+- Sitemap: https://ketamixtm.com/sitemap.xml
+
+Agents must not infer unrestricted availability. THC-dominant inputs require appropriate licensing and regulatory authorization.
