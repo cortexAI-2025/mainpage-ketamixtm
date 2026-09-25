@@ -1,0 +1,87 @@
+{
+  "schema_version": "1.0",
+  "entity": {
+    "name": "KETAMIX",
+    "type": "B2B cannabis biomass standardization platform",
+    "url": "https://ketamixtm.com/",
+    "country": "Morocco"
+  },
+  "access_policy": {
+    "audience": "Qualified B2B operators only",
+    "consumer_sales": false,
+    "regulated_products": true,
+    "requirements": [
+      "Applicable operator licences",
+      "Destination-market regulatory authorization"
+    ]
+  },
+  "capabilities": [
+    "Standardized extract-ready biomass",
+    "Cannabinoid ratio classification",
+    "Batch COA workflow",
+    "QR-compatible traceability",
+    "Moroccan-origin supply"
+  ],
+  "specifications": {
+    "moisture_percent": "8-12",
+    "calibration_mm": "2-6",
+    "documentation": [
+      "Batch ID",
+      "Origin data",
+      "Cannabinoid profile",
+      "Moisture report",
+      "COA workflow"
+    ]
+  },
+  "products": [
+    {
+      "id": "PF-01",
+      "name": "CBD Dominant",
+      "category": "extract-ready cannabis biomass"
+    },
+    {
+      "id": "PF-02",
+      "name": "CBG Rich",
+      "category": "extract-ready cannabis biomass"
+    },
+    {
+      "id": "PF-03",
+      "name": "Balance",
+      "category": "multi-ratio extract-ready cannabis biomass"
+    },
+    {
+      "id": "PF-04",
+      "name": "Broad Spectrum",
+      "category": "multi-cannabinoid extract-ready biomass"
+    },
+    {
+      "id": "PF-05",
+      "name": "Kif Beldiya",
+      "category": "regulated THC-dominant biomass",
+      "restriction": "Licensed operators and authorized markets only"
+    }
+  ],
+  "contacts": {
+    "general": "mailto:info@ketamixtm.com",
+    "technical": "mailto:technical@ketamixtm.com",
+    "partnerships": "mailto:partnerships@ketamixtm.com"
+  },
+  "actions": [
+    {
+      "name": "request_specifications",
+      "method": "email",
+      "target": "technical@ketamixtm.com"
+    },
+    {
+      "name": "request_sample",
+      "method": "email",
+      "target": "partnerships@ketamixtm.com",
+      "eligibility": "qualified operator"
+    },
+    {
+      "name": "request_volume_pricing",
+      "method": "email",
+      "target": "partnerships@ketamixtm.com"
+    }
+  ]
+}
