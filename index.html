@@ -1087,7 +1087,17 @@
       .applications-grid { grid-template-columns: 1fr; }
       .origin-stats { grid-template-columns: 1fr; }
     }
-  </style>
+  
+/* Conversion-focused additions */
+.hero-brand-image{position:absolute;right:4%;bottom:3%;width:180px;max-width:24vw;background:#fff;border-radius:2px;padding:10px;box-shadow:0 18px 50px rgba(0,0,0,.28);z-index:3}
+.proof-strip{background:#111b18;border-top:1px solid rgba(200,169,110,.18);border-bottom:1px solid rgba(200,169,110,.18);padding:1.1rem 0}
+.proof-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:rgba(200,169,110,.12)}
+.proof-item{background:#111b18;padding:1rem;text-align:center;font-family:var(--font-mono);font-size:.64rem;letter-spacing:.06em;text-transform:uppercase;color:rgba(245,242,236,.76)}
+.product-image{width:100%;aspect-ratio:4/5;object-fit:contain;background:#f7f7f5;margin:1rem 0 1.25rem;border:1px solid rgba(245,242,236,.1)}
+.lab-proof-image{width:100%;margin-top:1.5rem;aspect-ratio:16/9;object-fit:cover;border:1px solid rgba(200,169,110,.22)}
+.cta-buttons{flex-wrap:wrap}
+@media(max-width:900px){.hero-brand-image{display:none}.proof-grid{grid-template-columns:1fr 1fr}.proof-item:last-child{grid-column:1/-1}}
+</style>
 </head>
 <body>
 
@@ -1121,25 +1131,25 @@
       <span class="label">B2B Botanical Inputs Platform — Morocco</span>
     </div>
     <h1 class="hero-title">KETAMIX</h1>
-    <p class="hero-title-sub">Standardized Multi-Ratio Extract-Ready Botanical Inputs</p>
+    <p class="hero-title-sub">Standardized Moroccan Cannabis Biomass, Ready for Extraction</p>
     <p class="hero-desc">
-      A Moroccan B2B platform transforming classified cannabis biomass into traceable,
-      standardized, extract-ready inputs for regulated value chains.
+      CBD, CBG, multi-ratio and Beldiya inputs for licensed extractors, formulators and regulated supply chains.
     </p>
     <div class="hero-ctas">
-      <a href="#products" class="btn-primary">
-        Explore Product Families
+      <a href="mailto:technical@ketamixtm.com?subject=KETAMIX%20Specifications" class="btn-primary">
+        Request Specifications
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </a>
-      <a href="#cta" class="btn-secondary">Request B2B Information</a>
+      <a href="mailto:partnerships@ketamixtm.com?subject=KETAMIX%20Sample%20Request" class="btn-secondary">Request a Sample</a>
+      <a href="mailto:partnerships@ketamixtm.com?subject=KETAMIX%20Volume%20and%20Pricing" class="btn-secondary">Volume &amp; Pricing</a>
     </div>
     <div class="hero-metrics">
       <div>
-        <div class="hero-metric-val counter" data-target="5">0</div>
+        <div class="hero-metric-val">5</div>
         <div class="hero-metric-label">Product Families</div>
       </div>
       <div>
-        <div class="hero-metric-val counter" data-target="100">0</div>
+        <div class="hero-metric-val">100</div>
         <div class="hero-metric-label">% Traceable Batches</div>
       </div>
       <div>
@@ -1149,6 +1159,7 @@
     </div>
   </div>
 
+  <img class="hero-brand-image" src="assets/ketamix-logo.png" alt="KETAMIX logo" loading="eager"/>
   <div class="hero-right">
     <div class="hero-diagram">
       <div class="diagram-ring ring-1"></div>
@@ -1204,6 +1215,10 @@
     </div>
   </div>
 </section>
+
+<section class="proof-strip" aria-label="KETAMIX key specifications"><div class="container"><div class="proof-grid">
+<div class="proof-item">Morocco · Rif origin</div><div class="proof-item">Law 13-21 framework</div><div class="proof-item">Moisture 8–12%</div><div class="proof-item">Calibration 2–6 mm</div><div class="proof-item">COA + QR batch traceability</div>
+</div></div></section>
 
 <!-- ═══ ABOUT ═══ -->
 <section id="about">
@@ -1373,7 +1388,7 @@
           <span class="product-tag">CBD Dominant</span>
           <span class="product-index">PF-01</span>
         </div>
-        <h3 class="product-name">CBD<br/>Dominant</h3>
+        <img class="product-image" src="assets/ketamix-cbd-dominant.png" alt="KETAMIX CBD Dominant extract-ready biomass packaging" loading="lazy"/><h3 class="product-name">CBD<br/>Dominant</h3>
         <p class="product-desc">
           High-CBD, low-THC biomass standardized for CO₂ and ethanol extraction pathways.
           Optimized for broad-spectrum and isolate-grade formulation inputs. Consistently
@@ -1402,7 +1417,7 @@
           <span class="product-tag">CBG Rich</span>
           <span class="product-index">PF-02</span>
         </div>
-        <h3 class="product-name">CBG<br/>Rich</h3>
+        <img class="product-image" src="assets/ketamix-cbg-rich.png" alt="KETAMIX CBG Rich extract-ready biomass packaging" loading="lazy"/><h3 class="product-name">CBG<br/>Rich</h3>
         <p class="product-desc">
           Minor cannabinoid-focused biomass targeting CBG-dominant formulation. Early-harvest
           classification protocol applied to maximize CBG yield potential. Designed for
@@ -1431,7 +1446,7 @@
           <span class="product-tag">Multi-Ratio</span>
           <span class="product-index">PF-03</span>
         </div>
-        <h3 class="product-name">Balance</h3>
+        <img class="product-image" src="assets/ketamix-balance.png" alt="KETAMIX Balance extract-ready biomass packaging" loading="lazy"/><h3 class="product-name">Balance</h3>
         <p class="product-desc">
           Dual-cannabinoid architecture optimized for full-spectrum extract development.
           Structured CBD:CBG ratio logic enables reproducible formulation outcomes across
@@ -1489,7 +1504,7 @@
           <span class="product-tag" style="background:rgba(200,169,110,0.12);border-color:rgba(200,169,110,0.25);color:var(--sand);">Heritage Series</span>
           <span class="product-index">PF-05</span>
         </div>
-        <h3 class="product-name" style="color:var(--sand-light);">Beldiya<br/>THC Dominant</h3>
+        <img class="product-image" src="assets/ketamix-kif-beldiya.png" alt="KETAMIX Kif Beldiya extract-ready biomass packaging" loading="lazy"/><h3 class="product-name" style="color:var(--sand-light);">Beldiya<br/>THC Dominant</h3>
         <p class="product-desc">
           Classified from traditional Moroccan Beldiya cultivars — heritage genetics with
           documented terroir context. Structured for compliant regulated markets and research
@@ -1533,37 +1548,37 @@
       <div class="why-card reveal">
         <svg class="why-icon" viewBox="0 0 42 42" fill="none"><rect x="6" y="6" width="30" height="30" rx="2" stroke="currentColor" stroke-width="1.3"/><path d="M14 21h14M14 16h8M14 26h10" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/><circle cx="30" cy="16" r="2.5" stroke="currentColor" stroke-width="1.3"/></svg>
         <h3 class="why-title">Standardization</h3>
-        <p class="why-desc">KETAMIX inputs are defined by documented cannabinoid profiles, not harvest approximations. Every product family carries consistent specifications applicable across production batches — enabling processors to design formulations with input confidence.</p>
+        <p class="why-desc">Documented cannabinoid profiles and defined tolerances give processors consistent inputs across production batches.</p>
       </div>
 
       <div class="why-card reveal reveal-delay-1">
         <svg class="why-icon" viewBox="0 0 42 42" fill="none"><circle cx="21" cy="21" r="14" stroke="currentColor" stroke-width="1.3"/><path d="M21 7v14l8 8" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="21" cy="21" r="3" fill="currentColor" opacity="0.4"/></svg>
         <h3 class="why-title">Multi-Ratio Logic</h3>
-        <p class="why-desc">Rather than offering single-compound inputs, KETAMIX structures its families around deliberate cannabinoid ratios. This gives formulation developers direct access to defined botanical architectures suited to specific extraction and product development objectives.</p>
+        <p class="why-desc">Defined cannabinoid-ratio families let formulators select the botanical architecture required for each extraction objective.</p>
       </div>
 
       <div class="why-card reveal reveal-delay-2">
         <svg class="why-icon" viewBox="0 0 42 42" fill="none"><rect x="8" y="12" width="26" height="18" rx="2" stroke="currentColor" stroke-width="1.3"/><path d="M14 8v4M28 8v4M8 18h26" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/><path d="M13 24h4M25 24h4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
         <h3 class="why-title">Batch Consistency</h3>
-        <p class="why-desc">Each KETAMIX lot is classified, graded, and validated before dispatch. The batch logic ensures that technical parameters remain within defined tolerances across production volumes — a core requirement for professional processing and formulation operations.</p>
+        <p class="why-desc">Every lot is classified, graded and validated before dispatch to maintain defined parameters at production scale.</p>
       </div>
 
       <div class="why-card reveal">
         <svg class="why-icon" viewBox="0 0 42 42" fill="none"><path d="M21 6C13 6 7 12 7 21s6 15 14 15c2 0 4-.4 5.8-1.2" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/><path d="M35 21c0 4-2 7.5-5 9.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/><path d="M21 14v7l4 4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/><path d="M29 8l6 6-6 6" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
         <h3 class="why-title">Moroccan Terroir</h3>
-        <p class="why-desc">Morocco's unique climatic and geographical conditions — particularly in the Rif region — contribute distinct botanical characteristics to cultivated cannabis. KETAMIX captures this origin value within a standardized, documented framework for international B2B markets.</p>
+        <p class="why-desc">Rif terroir is preserved as a documented Moroccan-origin asset structured for international B2B markets.</p>
       </div>
 
       <div class="why-card reveal reveal-delay-1">
         <svg class="why-icon" viewBox="0 0 42 42" fill="none"><path d="M8 34l8-10 6 6 6-8 6 12" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/><rect x="6" y="6" width="30" height="28" rx="2" stroke="currentColor" stroke-width="1.3" fill="none"/></svg>
         <h3 class="why-title">Extract-Ready Classification</h3>
-        <p class="why-desc">KETAMIX biomass is classified not just by cannabinoid content but by pre-extraction suitability — including moisture parameters, morphological grading, and process compatibility. Reducing processor preparation steps and variability from the first input.</p>
+        <p class="why-desc">Moisture, calibration and process compatibility are controlled to reduce processor preparation and input variability.</p>
       </div>
 
       <div class="why-card reveal reveal-delay-2">
         <svg class="why-icon" viewBox="0 0 42 42" fill="none"><circle cx="21" cy="14" r="6" stroke="currentColor" stroke-width="1.3"/><circle cx="9" cy="32" r="4" stroke="currentColor" stroke-width="1.3"/><circle cx="33" cy="32" r="4" stroke="currentColor" stroke-width="1.3"/><path d="M21 20v4M13 30l4-4M29 30l-4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
         <h3 class="why-title">B2B Supply Intelligence</h3>
-        <p class="why-desc">KETAMIX is designed as a supply intelligence platform — integrating batch documentation, classification data, and traceability logic to support procurement and quality management workflows for professional B2B operators at scale.</p>
+        <p class="why-desc">Batch documentation and QR traceability integrate directly into procurement, quality and compliance workflows.</p>
       </div>
 
     </div>
@@ -1592,6 +1607,7 @@
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="5.5" stroke="currentColor" stroke-width="1.1"/><path d="M5 7l1.5 1.5L9 5" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg>
           COA-Oriented Workflow Standard
         </div>
+        <img class="lab-proof-image" src="assets/ketamix-lab.png" alt="KETAMIX laboratory quality-control workflow" loading="lazy"/>
       </div>
       <div class="tech-specs-list">
         <div class="tech-spec-item">
@@ -1955,10 +1971,11 @@
       </p>
       <div class="cta-buttons">
         <a href="mailto:partnerships@ketamixtm.com" class="btn-primary">
-          Discuss a Partnership
+          Discuss Volume &amp; Pricing
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
-        <a href="mailto:technical@ketamixtm.com" class="btn-secondary">Request Technical Information</a>
+        <a href="mailto:technical@ketamixtm.com?subject=KETAMIX%20Specifications" class="btn-secondary">Request Specifications</a>
+        <a href="mailto:partnerships@ketamixtm.com?subject=KETAMIX%20Sample%20Request" class="btn-secondary">Request a Sample</a>
       </div>
       <p style="margin-top:2rem;font-family:var(--font-mono);font-size:0.6rem;color:rgba(138,144,136,0.5);letter-spacing:0.1em;">
         KETAMIX operates exclusively within applicable regulatory frameworks. B2B qualified operators only.
@@ -1974,7 +1991,7 @@
       <div>
         <div class="footer-logo">KET<span>A</span>MIX</div>
         <p class="footer-desc">
-          Standardized Multi-Ratio Extract-Ready Botanical Inputs.<br/>
+          Standardized Moroccan Cannabis Biomass, Ready for Extraction.<br/>
           Moroccan origin. Industrial discipline. B2B supply intelligence.
         </p>
         <div style="margin-top:1.5rem;display:flex;gap:0.8rem;">
