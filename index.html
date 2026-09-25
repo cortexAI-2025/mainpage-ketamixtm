@@ -1097,6 +1097,61 @@
 .lab-proof-image{width:100%;margin-top:1.5rem;aspect-ratio:16/9;object-fit:cover;border:1px solid rgba(200,169,110,.22)}
 .cta-buttons{flex-wrap:wrap}
 @media(max-width:900px){.hero-brand-image{display:none}.proof-grid{grid-template-columns:1fr 1fr}.proof-item:last-child{grid-column:1/-1}}
+
+/* KETAMIX white brand theme */
+:root{
+  --black:#ffffff;
+  --deep-green:#f4f8f9;
+  --forest:#e8f2f3;
+  --moss:#cce3e5;
+  --sage:#11b7b4;
+  --sand:#11b7b4;
+  --sand-light:#0b3550;
+  --sand-pale:#e9f7f7;
+  --off-white:#0b2c42;
+  --warm-white:#ffffff;
+  --mid-gray:#5d7280;
+  --light-gray:#d8e4e8;
+  --border:rgba(11,53,80,.15);
+  --border-soft:rgba(11,53,80,.09);
+}
+body{background:#fff;color:var(--off-white)}
+body::before{opacity:.05}
+nav.scrolled{background:rgba(255,255,255,.94);border-bottom:1px solid var(--border);box-shadow:0 8px 30px rgba(11,53,80,.06)}
+.nav-logo,.nav-links a,.nav-mobile-toggle span{color:var(--off-white)}
+.nav-links a:hover{color:var(--sage)}
+.btn-primary{background:var(--sage);color:#fff;border-color:var(--sage)}
+.btn-primary:hover{background:#079b99;color:#fff}
+.btn-secondary{color:var(--off-white);border-color:rgba(11,53,80,.3)}
+.btn-secondary:hover{border-color:var(--sage);color:var(--sage)}
+#hero{background:linear-gradient(135deg,#fff 0%,#f4fbfb 62%,#e8f7f7 100%)}
+.hero-bg-gradient{background:radial-gradient(ellipse 60% 80% at 70% 50%,rgba(17,183,180,.15) 0%,transparent 70%)}
+.hero-desc,.body-sm,.why-desc,.app-desc,.qr-text{color:var(--mid-gray)}
+.hero-diagram{opacity:.92}
+.diagram-ring{border-color:rgba(11,53,80,.18)}
+.ring-4{background:rgba(17,183,180,.12);border-color:rgba(17,183,180,.38)}
+.data-card,.batch-card{background:rgba(255,255,255,.95);box-shadow:0 18px 50px rgba(11,53,80,.09)}
+#about,#products,#technical,#applications,#roadmap{background:#fff}
+#process,#why,#origin,#traceability{background:var(--deep-green)}
+.product-card,.why-card,.app-card,.tech-spec-item,.flow-node{background:#fff;border-color:var(--border)}
+.product-card:hover,.why-card:hover,.app-card:hover,.flow-node:hover{background:#f2fbfb;border-color:rgba(17,183,180,.42)}
+.product-name,.why-title,.app-title,.tech-spec-key,.display-lg,.display-md{color:var(--off-white)}
+.product-desc,.tech-spec-val,.origin-left p,.cta-text{color:var(--mid-gray)}
+.spec-val,.data-card-val,.batch-row-val{color:var(--off-white)}
+.product-ratio-bar{background:rgba(11,53,80,.09)}
+.ratio-fill{background:linear-gradient(90deg,var(--sage),#0b3550)}
+.proof-strip{background:#f2fbfb;border-color:rgba(17,183,180,.2)}
+.proof-grid{background:rgba(17,183,180,.16)}
+.proof-item{background:#fff;color:var(--off-white)}
+.origin-bg{opacity:.15}
+.tech-badge,.product-tag{background:rgba(17,183,180,.1);border-color:rgba(17,183,180,.25);color:#087f7d}
+.cta-inner{background:linear-gradient(135deg,#f2fbfb,#fff);border:1px solid rgba(17,183,180,.22)}
+footer{background:#f4f8f9;border-top:1px solid var(--border)}
+.footer-desc,.footer-links a{color:var(--mid-gray)}
+.footer-logo,.footer-col-title{color:var(--off-white)}
+[style*="color:rgba(245,242,236"]{color:var(--mid-gray)!important}
+[style*="color:rgba(138,144,136"]{color:var(--mid-gray)!important}
+.hero-brand-image{box-shadow:0 18px 50px rgba(11,53,80,.12);border:1px solid var(--border)}
 </style>
 </head>
 <body>
