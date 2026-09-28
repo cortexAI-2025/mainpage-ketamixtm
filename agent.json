@@ -62,9 +62,8 @@
     }
   ],
   "contacts": {
-    "general": "mailto:info@ketamixtm.com",
-    "technical": "mailto:technical@ketamixtm.com",
-    "partnerships": "mailto:partnerships@ketamixtm.com"
+    "primary_email": "contact@ketamixtm.com",
+    "direct_email": "mailto:contact@ketamixtm.com"
   },
   "public_documents": [
     {
@@ -78,20 +77,27 @@
   ],
   "actions": [
     {
+      "name": "contact_directly",
+      "method": "email",
+      "target": "contact@ketamixtm.com",
+      "uri": "mailto:contact@ketamixtm.com",
+      "description": "Direct KETAMIX contact for qualified B2B enquiries. A human reviews messages; no automated API submission endpoint is offered."
+    },
+    {
       "name": "request_specifications",
       "method": "email",
-      "target": "technical@ketamixtm.com"
+      "target": "contact@ketamixtm.com"
     },
     {
       "name": "request_sample",
       "method": "email",
-      "target": "partnerships@ketamixtm.com",
+      "target": "contact@ketamixtm.com",
       "eligibility": "qualified operator"
     },
     {
       "name": "request_volume_pricing",
       "method": "email",
-      "target": "partnerships@ketamixtm.com"
+      "target": "contact@ketamixtm.com"
     }
   ]
 }

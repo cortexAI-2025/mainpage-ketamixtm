@@ -75,7 +75,7 @@ table = Table([[Paragraph(x, styles["KSmall"]) for x in row] for row in data], c
 table.setStyle(TableStyle([("BACKGROUND", (0,0), (-1,0), colors.HexColor("#EAF4F4")), ("GRID", (0,0), (-1,-1), .4, colors.HexColor("#C9D8DC")), ("VALIGN", (0,0), (-1,-1), "TOP"), ("LEFTPADDING", (0,0), (-1,-1), 8), ("RIGHTPADDING", (0,0), (-1,-1), 8), ("TOPPADDING", (0,0), (-1,-1), 7), ("BOTTOMPADDING", (0,0), (-1,-1), 7)]))
 story.append(table)
 story.append(Spacer(1, 12))
-p("Document public d'orientation. Les seuils analytiques, méthodes de remédiation et critères de libération relèvent des procédures contrôlées de chaque opérateur et du marché concerné. Contact technique : technical@ketamixtm.com", "KSmall")
+p("Document public d'orientation. Les seuils analytiques, méthodes de remédiation et critères de libération relèvent des procédures contrôlées de chaque opérateur et du marché concerné. Contact technique : contact@ketamixtm.com", "KSmall")
 
 def footer(canvas, doc):
     canvas.setStrokeColor(teal)

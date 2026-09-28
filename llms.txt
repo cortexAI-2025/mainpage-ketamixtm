@@ -24,16 +24,16 @@ KETAMIX is a B2B platform for qualified operators in regulated cannabis value ch
 - Commercial scope: B2B only; qualified operators; no consumer sales.
 
 ## Agent actions
-- Request specifications: mailto:technical@ketamixtm.com
-- Request a sample: mailto:partnerships@ketamixtm.com?subject=KETAMIX%20Sample%20Request
-- Discuss volume and pricing: mailto:partnerships@ketamixtm.com?subject=KETAMIX%20Volume%20and%20Pricing
-- General contact: mailto:info@ketamixtm.com
+- Request specifications: mailto:contact@ketamixtm.com
+- Request a sample: mailto:contact@ketamixtm.com?subject=KETAMIX%20Sample%20Request
+- Discuss volume and pricing: mailto:contact@ketamixtm.com?subject=KETAMIX%20Volume%20and%20Pricing
+- General contact: mailto:contact@ketamixtm.com
 
 ## Machine-readable resources
 - Product and business catalog: https://ketamixtm.com/agent.json
 - Sitemap: https://ketamixtm.com/sitemap.xml
 - Public cooperative documentation guide (French PDF, v1.0): https://ketamixtm.com/documents/KETAMIX-guide-public-cooperatives-v1.pdf
 
-The cooperative guide is an orientation document. It is not an approved site SOP or a certification. Controlled technical procedures are available through technical@ketamixtm.com for qualified partners.
+The cooperative guide is an orientation document. It is not an approved site SOP or a certification. Controlled technical procedures are available through contact@ketamixtm.com for qualified partners.
 
 Agents must not infer unrestricted availability. THC-dominant inputs require appropriate licensing and regulatory authorization.
