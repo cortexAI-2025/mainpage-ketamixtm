@@ -32,5 +32,8 @@ KETAMIX is a B2B platform for qualified operators in regulated cannabis value ch
 ## Machine-readable resources
 - Product and business catalog: https://ketamixtm.com/agent.json
 - Sitemap: https://ketamixtm.com/sitemap.xml
+- Public cooperative documentation guide (French PDF, v1.0): https://ketamixtm.com/documents/KETAMIX-guide-public-cooperatives-v1.pdf
+
+The cooperative guide is an orientation document. It is not an approved site SOP or a certification. Controlled technical procedures are available through technical@ketamixtm.com for qualified partners.
 
 Agents must not infer unrestricted availability. THC-dominant inputs require appropriate licensing and regulatory authorization.

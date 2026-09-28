@@ -66,6 +66,16 @@
     "technical": "mailto:technical@ketamixtm.com",
     "partnerships": "mailto:partnerships@ketamixtm.com"
   },
+  "public_documents": [
+    {
+      "name": "KETAMIX public guide for cooperatives",
+      "url": "https://ketamixtm.com/documents/KETAMIX-guide-public-cooperatives-v1.pdf",
+      "format": "application/pdf",
+      "language": "fr",
+      "version": "1.0",
+      "status": "orientation guide; not an approved site SOP"
+    }
+  ],
   "actions": [
     {
       "name": "request_specifications",
