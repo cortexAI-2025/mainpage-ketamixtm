@@ -1087,7 +1087,7 @@
       .applications-grid { grid-template-columns: 1fr; }
       .origin-stats { grid-template-columns: 1fr; }
     }
-  
+
 /* Conversion-focused additions */
 .hero-brand-image{position:absolute;right:4%;bottom:3%;width:180px;max-width:24vw;background:#fff;border-radius:2px;padding:10px;box-shadow:0 18px 50px rgba(0,0,0,.28);z-index:3}
 .proof-strip{background:#111b18;border-top:1px solid rgba(200,169,110,.18);border-bottom:1px solid rgba(200,169,110,.18);padding:1.1rem 0}
@@ -1265,6 +1265,48 @@ footer{background:#fff!important;border-top:1px solid var(--line)!important}
 .footer-col-title{color:var(--brand-teal-dark)!important}
 .footer-desc,.footer-links a,.footer-copy,.footer-compliance{color:var(--text-muted)!important}
 .footer-links a:hover{color:var(--brand-teal-dark)!important}
+
+/* 2026 brand refresh: white canvas, forest green and ochre from KETAMIX identity */
+:root{
+ --brand-navy:#123d2f;--brand-navy-2:#1e5140;--brand-teal:#b77d3e;--brand-teal-dark:#845622;
+ --text-main:#1c3f32;--text-muted:#455d50;--surface:#fff;--surface-alt:#f7faf6;
+ --line:#d4dfd4;--black:#fff;--deep-green:#f7faf6;--forest:#eaf3e9;--moss:#d6e7d7;
+ --sage:#286344;--sand:#b77d3e;--sand-light:#175039;--sand-pale:#f9f3e9;
+ --off-white:#123d2f;--warm-white:#fff;--mid-gray:#455d50;--light-gray:#d4dfd4;
+ --border:rgba(18,61,47,.17);--border-soft:rgba(18,61,47,.08)
+}
+html,body{background:#fff!important;color:var(--text-main)!important}
+nav,nav.scrolled,.nav-inner,.nav-links{background:#fff!important}
+.nav-logo,.footer-logo{color:var(--brand-navy)!important}
+.nav-logo span,.footer-logo span{color:var(--brand-teal)!important}
+.nav-links a,.nav-mobile-toggle span{color:var(--brand-navy)!important}
+.nav-cta,.btn-primary{background:var(--brand-navy)!important;border-color:var(--brand-navy)!important;color:#fff!important}
+.nav-cta:hover,.btn-primary:hover{background:var(--brand-teal-dark)!important;border-color:var(--brand-teal-dark)!important;color:#fff!important}
+#hero{background:#fff!important}
+.hero-left{background:#fff!important}
+.hero-right{background:url('assets/biomass-sample-3.jpg') center/cover no-repeat!important}
+.hero-right::after{background:linear-gradient(90deg,rgba(18,61,47,.1),rgba(18,61,47,.02))!important}
+.hero-title,.display-xl,.display-lg,.display-md,h1,h2,h3,h4,.hero-metric-val,.origin-stat-val{color:var(--brand-navy)!important}
+.hero-title-sub,.label,.hero-metric-label,.section-tag,.product-index,.spec-key,.tech-spec-key,.batch-row-key,.footer-col-title{color:var(--brand-teal-dark)!important}
+.hero-desc,section p,section li,.product-desc,.spec-val,.tech-spec-val,.footer-desc,.footer-links a{color:var(--text-muted)!important}
+#about,#products,#technical,#applications,#cta,footer{background:#fff!important}
+#flow,#origin,#traceability,#cooperatives{background:var(--surface-alt)!important}
+.proof-strip,.proof-item{background:var(--brand-navy)!important;color:#fff!important}
+.proof-grid{background:rgba(255,255,255,.22)!important}
+.product-card,.flow-node,.app-card,.batch-card,.tech-spec-item,.concise-card{background:#fff!important;border-color:var(--line)!important;box-shadow:0 12px 32px rgba(18,61,47,.06)!important}
+.product-card:hover,.flow-node:hover,.app-card:hover{background:#fbfdfb!important;border-color:var(--brand-teal)!important}
+.product-card::before,.ratio-fill{background:var(--brand-teal)!important}
+.product-tag,.tech-badge{background:#f7f0e6!important;border-color:#ddc5a7!important;color:var(--brand-teal-dark)!important}
+.product-image{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;object-position:center;background:#f6f6f2;margin:1rem 0 1.25rem;border:1px solid var(--line);border-radius:10px}
+.product-card:nth-child(2) .product-tag{background:#f2edf6!important;border-color:#d9c6e5!important;color:#6f4b86!important}
+.product-card:nth-child(5) .product-tag{background:#f7f0e6!important;border-color:#ddc5a7!important;color:var(--brand-teal-dark)!important}
+.product-ratio-bar{background:#e7eee6!important}
+.origin-visual{object-fit:cover!important;border-radius:10px}
+.cta-inner{background:linear-gradient(135deg,#f3f8f2,#fff)!important;border-color:#c8d9c7!important}
+.btn-secondary,.btn-ghost{color:var(--brand-navy)!important;border-color:var(--brand-navy)!important}
+.btn-secondary:hover,.btn-ghost:hover{color:var(--brand-teal-dark)!important;border-color:var(--brand-teal-dark)!important}
+footer{border-top:1px solid var(--line)!important}
+@media(max-width:900px){.nav-links.open{background:#fff!important;border-color:var(--line)!important}.nav-links.open a{color:var(--brand-navy)!important}.hero-right{height:42vh!important}}
 </style>
 
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1" />
@@ -1346,7 +1388,7 @@ footer{background:#fff!important;border-top:1px solid var(--line)!important}
     </div>
   </div>
 
-  <img class="hero-brand-image" src="assets/ketamix-logo.png" alt="KETAMIX logo" loading="eager"/>
+
   <div class="hero-right">
     <div class="hero-diagram">
       <div class="diagram-ring ring-1"></div>
@@ -1517,7 +1559,7 @@ footer{background:#fff!important;border-top:1px solid var(--line)!important}
           <span class="product-tag">CBD Dominant</span>
           <span class="product-index">PF-01</span>
         </div>
-        <img class="product-image" src="assets/ketamix-cbd-dominant.png" alt="KETAMIX CBD Dominant extract-ready biomass packaging" loading="lazy"/><h3 class="product-name">CBD<br/>Dominant</h3>
+        <img class="product-image" src="assets/biomass-sample-3.jpg" alt="KETAMIX CBD Dominant biomass sample for illustration" loading="lazy"/><h3 class="product-name">CBD<br/>Dominant</h3>
         <p class="product-desc">High-CBD biomass prepared for consistent extraction.</p>
         <div class="product-specs">
           <div class="spec-row">
@@ -1542,7 +1584,7 @@ footer{background:#fff!important;border-top:1px solid var(--line)!important}
           <span class="product-tag">CBG Rich</span>
           <span class="product-index">PF-02</span>
         </div>
-        <img class="product-image" src="assets/ketamix-cbg-rich.png" alt="KETAMIX CBG Rich extract-ready biomass packaging" loading="lazy"/><h3 class="product-name">CBG<br/>Rich</h3>
+        <img class="product-image" src="assets/biomass-sample-4.jpg" alt="KETAMIX CBG Rich biomass sample for illustration" loading="lazy"/><h3 class="product-name">CBG<br/>Rich</h3>
         <p class="product-desc">CBG-rich biomass for specialized cannabinoid formulations.</p>
         <div class="product-specs">
           <div class="spec-row">
@@ -1567,7 +1609,7 @@ footer{background:#fff!important;border-top:1px solid var(--line)!important}
           <span class="product-tag">Multi-Ratio</span>
           <span class="product-index">PF-03</span>
         </div>
-        <img class="product-image" src="assets/ketamix-balance.png" alt="KETAMIX Balance extract-ready biomass packaging" loading="lazy"/><h3 class="product-name">Balance</h3>
+        <img class="product-image" src="assets/biomass-sample-1.jpg" alt="KETAMIX Balance biomass sample for illustration" loading="lazy"/><h3 class="product-name">Balance</h3>
         <p class="product-desc">Balanced cannabinoid input for reproducible full-spectrum extracts.</p>
         <div class="product-specs">
           <div class="spec-row">
@@ -1592,7 +1634,7 @@ footer{background:#fff!important;border-top:1px solid var(--line)!important}
           <span class="product-tag">Broad Spectrum</span>
           <span class="product-index">PF-04</span>
         </div>
-        <h3 class="product-name">Broad<br/>Spectrum</h3>
+        <img class="product-image" src="assets/biomass-sample-2.jpg" alt="Illustrative extract-ready biomass sample" loading="lazy"/><h3 class="product-name">Broad<br/>Spectrum</h3>
         <p class="product-desc">Multi-cannabinoid biomass preserving broader botanical complexity.</p>
         <div class="product-specs">
           <div class="spec-row">
@@ -1617,7 +1659,7 @@ footer{background:#fff!important;border-top:1px solid var(--line)!important}
           <span class="product-tag" style="background:rgba(200,169,110,0.12);border-color:rgba(200,169,110,0.25);color:var(--sand);">Heritage Series</span>
           <span class="product-index">PF-05</span>
         </div>
-        <img class="product-image" src="assets/ketamix-kif-beldiya.png" alt="KETAMIX Kif Beldiya extract-ready biomass packaging" loading="lazy"/><h3 class="product-name" style="color:var(--sand-light);">Beldiya<br/>THC Dominant</h3>
+        <img class="product-image" src="assets/biomass-sample-2.jpg" alt="KETAMIX Kif Beldiya biomass sample for illustration" loading="lazy"/><h3 class="product-name" style="color:var(--sand-light);">Beldiya<br/>THC Dominant</h3>
         <p class="product-desc">Moroccan Beldiya heritage biomass for licensed operators.</p>
         <div class="product-specs">
           <div class="spec-row">
@@ -1638,7 +1680,7 @@ footer{background:#fff!important;border-top:1px solid var(--line)!important}
 
     </div>
     <p style="margin-top:1.5rem;font-family:var(--font-mono);font-size:0.6rem;color:var(--mid-gray);letter-spacing:0.08em;">
-      * All product families are available for B2B qualified operators only. THC-dominant family subject to applicable regulatory frameworks.
+      * Biomass photographs are illustrative and do not identify specific varieties or released lots. Profiles require batch analysis. B2B qualified operators only.
     </p>
   </div>
 </section>
@@ -1728,7 +1770,7 @@ footer{background:#fff!important;border-top:1px solid var(--line)!important}
         </div>
       </div>
       <div class="origin-right reveal reveal-delay-1">
-        <img class="origin-visual" src="assets/ketamix-kif-beldiya.png" alt="KETAMIX Kif Beldiya Moroccan extract-ready biomass packaging" loading="lazy"/>
+        <img class="origin-visual" src="assets/biomass-sample-2.jpg" alt="KETAMIX Kif Beldiya Moroccan biomass sample for illustration" loading="lazy"/>
       </div>
     </div>
   </div>
